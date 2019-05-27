@@ -19,7 +19,7 @@ use Qcloud\Sms\SmsSingleSender;
 use App\channel\mailControl;
 	Route::get('/index/index','home\IndexController@channelindex')->name('index');
 	Route::get('/index/fb','home\IndexController@fb');
-
+    Route::get('/sms','home\SmsController@send');
 /*	Route::get('/index/sendemail','home\IndexController@sendmail');*/
 	/*Route::any('/paypal',function(Request $request){
 		//order_notice();
@@ -45,7 +45,7 @@ use App\channel\mailControl;
 	Route::get('/send','home\IndexController@send');
 	Route::post('/send_message','home\IndexController@sendMessages'); //发送短信消息
 	Route::get('/sendmsg','home\IndexController@get_sendmsg');
-	Route::post('/sms','home\SmsController@send'); //发送测试短信消息
+
 	Route::get('/orderSuccess','home\IndexController@orderSuccess');
 	
 	Route::match(['get', 'post'],'/getsendmsg','home\IndexController@getsendmsg');
@@ -62,7 +62,7 @@ use App\channel\mailControl;
 	Route::post('/customshippingmethod/countdown/index','home\SiteController@countdown');
 });
 Route::middleware([])->group(function(){
-	
+
 	Route::any('/order/save_testcom','home\IndexController@savetestform');
 	Route::get('/visfrom/settime','home\IndexController@settime');
 	Route::get('/visfrom/setbuy','home\IndexController@setbuy');
