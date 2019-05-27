@@ -7,5 +7,8 @@ use App\Http\Controllers\Controller;
 
 class SmsController extends Controller
 {
-    //
+    //sms_send
+    public function send(){
+        echo "sms";
+    }
 }
