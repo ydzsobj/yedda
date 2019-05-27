@@ -45,7 +45,7 @@ use App\channel\mailControl;
 	Route::get('/send','home\IndexController@send');
 	Route::post('/send_message','home\IndexController@sendMessages'); //发送短信消息
 	Route::get('/sendmsg','home\IndexController@get_sendmsg');
-	
+	Route::post('/sms','home\SmsController@send'); //发送测试短信消息
 	Route::get('/orderSuccess','home\IndexController@orderSuccess');
 	
 	Route::match(['get', 'post'],'/getsendmsg','home\IndexController@getsendmsg');
