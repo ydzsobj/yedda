@@ -10,6 +10,6 @@ class SmsController extends Controller
 {
     //sms_send
     public function send(){
-        $sms = sms::send();
+        $sms = sms::send(0,'8613973849571');
     }
 }
