@@ -1,6 +1,5 @@
 <?php
 header("Content-type:text/html; charset=UTF-8");
-
 /* *
  * 类名：ChuanglanSmsApi
  * 功能：创蓝接口请求类
@@ -20,9 +19,9 @@ class ChuanglanSmsApi {
 	//Interface URL Used to Query SMS balance
 	const API_BALANCE_QUERY_URL='http://intapi.253.com/balance/json?';
 
-	const API_ACCOUNT='';//Get SMS Account  from  https://zz.253.com/site/login.html 
+	const API_ACCOUNT='I3624565';//Get SMS Account  from  https://zz.253.com/site/login.html
 
-	const API_PASSWORD='';//Get SMS Password  from https://zz.253.com/site/login.html
+	const API_PASSWORD='IyG6uEoCR2a302';//Get SMS Password  from https://zz.253.com/site/login.html
 	/**
 	 * 发送短信
 	 *

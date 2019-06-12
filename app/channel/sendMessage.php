@@ -11,7 +11,7 @@ include_once __DIR__.'/../Utils/fastoo_sdk/model/SendSingleSmsParm.php';
 include_once __DIR__.'/../Utils/fastoo_sdk/model/SendBatchSmsParm.php';
 include_once __DIR__.'/../Utils/fastoo_sdk/api/SendSmsApi.php';
 class sendMessage{
-    private static $phones=['8618348406783','8615978789522','8618736974521','8618238205232','8618638233841'];
+    private static $phones=['8615639069121','8618238205232','8613001122802'];
     /**
      * 发送消息
      * @param $request

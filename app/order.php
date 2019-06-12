@@ -19,6 +19,10 @@ class order extends Model
         return $this->hasOne('App\currency_type', 'currency_type_id', 'order_currency_id');
     }
 
+    public function goods(){
+        return $this->hasOne('App\goods','goods_id','order_goods_id');
+    }
+
     //获取账户所在组的所有订单
     public static function get_group_order($admin_id){
       $admin=\App\admin::where('admin_id',$admin_id)->first();

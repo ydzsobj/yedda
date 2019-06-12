@@ -1,15 +1,22 @@
 <?php
 
-namespace App\Http\Controllers\home;
+namespace App\Http\Controllers\admin;
 
 use App\channel\sms;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
+
 class SmsController extends Controller
 {
     //sms_send
     public function send(){
-        $sms = sms::send(0,'8613973849571');
+        //sms::send(0,'40176');
+    }
+
+    public function index()
+    {
+        $data = \App\Sms::orderBy('id','desc')->take(1000)->get();
+        return view('admin.sms.index')->with(compact('data'));
     }
 }

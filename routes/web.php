@@ -19,7 +19,7 @@ use Qcloud\Sms\SmsSingleSender;
 use App\channel\mailControl;
 	Route::get('/index/index','home\IndexController@channelindex')->name('index');
 	Route::get('/index/fb','home\IndexController@fb');
-    Route::get('/sms','home\SmsController@send');
+    Route::get('/admin/sms','admin\SmsController@send');
 /*	Route::get('/index/sendemail','home\IndexController@sendmail');*/
 	/*Route::any('/paypal',function(Request $request){
 		//order_notice();
@@ -228,6 +228,8 @@ Route::middleware(['auth:check','checkadmin'])->group(function(){
     Route::get('/admin/message/mark','admin\MessageController@mark');//短信列表
     Route::get('/admin/message/order_msg', 'admin\MessageController@order_msg');
     Route::get('/admin/message/export', 'admin\MessageController@export');
+
+    Route::get('/admin/sms/index','admin\SmsController@index');//短信首页
     //站点
     Route::get('/admin/sites/index','admin\SiteController@index');//站点列表
     Route::post('/admin/sites/get_table','admin\SiteController@get_table');//

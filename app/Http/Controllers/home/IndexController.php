@@ -4,6 +4,7 @@ namespace App\Http\Controllers\home;
 
 use App\channel\sendMessage;
 use App\channel\skuSDK;
+use App\channel\sms;
 use App\currency_type;
 use App\goods_kind;
 use App\kind_config;
@@ -702,7 +703,8 @@ class IndexController extends Controller
           return response()->json(['err'=>0,'url'=>'/endfail?type=0&goods_id='.$goods_id]);
     	}else{;
             $order_id=$order->order_id;
-        return response()->json(['err'=>1,'url'=>"/endsuccess?type=1&goods_id=$goods_id&order_id=$order_id"]);
+            //sms::send(0,$order_id);  //订单短信发送提醒客服人员
+        return response()->json(['err'=>0,'url'=>"/endsuccess?type=1&goods_id=$goods_id&order_id=$order_id"]);
             //return view('ajax.endsuccess')->with(['order'=>$order,'url'=>$url,'goods'=>$goods]);
     	}
     }
