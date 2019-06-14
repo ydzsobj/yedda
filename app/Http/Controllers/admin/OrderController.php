@@ -1421,7 +1421,11 @@ class OrderController extends Controller
          }else{
             $filename='订单记录'.date('Y-m-d H:i:s',time()).'.xls';
          }
-
+         $ip = $request->getClientIp();
+         $data_log = [
+             'filename'=>$filename
+         ];
+       operation_log($ip,'导出订单',json_encode($data_log));
        if($goods_blade_type == 6 || $goods_blade_type == 7){
            $zdname=['下单时间','审核时间','订单编号','客户名字','客户电话','详细地址','地区','城市','县','邮寄地址','邮政编码','产品名称','产品英文名称','商品名','币种','总金额','数量','产品属性信息','产品英文属性信息','商品展示属性信息','商品sku信息','备注','支付方式','商品所属人','客服备注'];
        }else{
