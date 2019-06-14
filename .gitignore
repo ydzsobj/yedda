@@ -4,6 +4,7 @@
 /public/upload
 /public/ueditor
 /storage/*.key
+/storage
 /.idea
 /.vagrant
 /vendor
