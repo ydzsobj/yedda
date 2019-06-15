@@ -25,6 +25,7 @@ use Excel;
 
 class OrderController extends Controller
 {
+   public static $DATA_STR = "订单导出---筛选条件：\r\n";
    public function index(){
      $admins = admin::whereIn('admin_id',admin::get_admins_id())->get();
      $counts = DB::table('order')
@@ -1115,23 +1116,24 @@ class OrderController extends Controller
            ->leftjoin('cuxiao','order.order_cuxiao_id','=','cuxiao.cuxiao_id')
            ->leftjoin('admin','order.order_admin_id','=','admin.admin_id')
            ->where(function($query){
-            if(Auth::user()->is_root!='1'){
-//              $goods=\App\goods::get_ownid(Auth::user()->admin_id);
-              $query->whereIn('goods_admin_id', admin::get_admins_id());
-            }
+                if(Auth::user()->is_root!='1'){
+//                  $goods=\App\goods::get_ownid(Auth::user()->admin_id);
+                    $query->whereIn('goods_admin_id', admin::get_admins_id());
+                }
            })
            ->where(function($query){
-            $query->where('order.is_del','0');
+                $query->where('order.is_del','0');
            })
           /* ->where(function($query){
             $query->where('order.order_type','1');
            })*/
            ->where(function($query)use($request){
-            $goods_search=$request->input('admin_name');
-            //筛选不同账户条件
-              if($goods_search!=0){
-                   $garr=\App\goods::get_only_slef_id($goods_search);
-                $query->whereIn('order_goods_id',$garr);
+                $goods_search=$request->input('admin_name');
+                //筛选不同账户条件
+                if($goods_search!=0){
+                    static::$DATA_STR .= '账户id：'.$goods_search."\r\n";
+                    $garr=\App\goods::get_only_slef_id($goods_search);
+                    $query->whereIn('order_goods_id',$garr);
                 }
            })
            ->where(function($query)use($request){
@@ -1139,20 +1141,25 @@ class OrderController extends Controller
               $pay_type=$request->input('pay_type');
               $order_time=$request->input('order_time');
               if($order_type!='null'){
-                if($order_type==0){
-                  $query->whereIn('order.order_type',[0,11]);
-                }else{
-                  $query->where('order.order_type',$order_type);
-                }
+                    if($order_type==0){
+                        static::$DATA_STR .= '订单状态：未审核，在线支付支付成功'."\r\n";
+                        $query->whereIn('order.order_type',[0,11]);
+                    }else{
+                        static::$DATA_STR .= '订单状态：'.$order_type."\r\n";
+                        $query->where('order.order_type',$order_type);
+                    }
               }else{
-                $query->whereIn('order.order_type',[1,3,4]);
+                  static::$DATA_STR .= '订单状态：通过审核，已发货，已签收'."\r\n";
+                  $query->whereIn('order.order_type',[1,3,4]);
               }
 
               if($pay_type!='null'){
+                  static::$DATA_STR .= '支付方式：'.$pay_type == 0 ? '货到付款\r\n' : '在线支付\r\n';
                   $query->where('order.order_pay_type',$pay_type);
               }
               //根据语言搜索
               if($request->has('languages')&&$request->input('languages')!='0'){
+                  static::$DATA_STR .= '语言：'.$request->input('languages')."\r\n";
                   //按语言查询（根据模板置换语言）
                   $band = goods::get_blade($request->input('languages'));
                   if($band){
@@ -1163,22 +1170,27 @@ class OrderController extends Controller
                //根据时间搜索条件筛选
                if($order_time == 0){
                    if($request->has('min')&&$request->has('max')){
+                       static::$DATA_STR .= '订单创建时间：'.$request->input('min').'--'.$request->input('max')."\r\n";
                        $query->whereBetween('order.order_time',[$request->input('min'),$request->input('max')]);
                    }else{
                        $now_date=date('Y-m-d',time()).' 00:00:00';
+                       static::$DATA_STR .= '订单创建时间:'.$now_date."\r\n";
                        $query->where('order.order_time','>',$now_date);
                    }
                }else{
                    if($request->has('min')&&$request->has('max')){
+                       static::$DATA_STR .= '订单审核时间：'.$request->input('min').'--'.$request->input('max')."\r\n";
                        $query->whereBetween('order.order_return_time',[$request->input('min'),$request->input('max')]);
                    }else{
                        $now_date=date('Y-m-d',time()).' 00:00:00';
+                       static::$DATA_STR .= '订单审核时间:'.$now_date."\r\n";
                        $query->where('order.order_return_time','>',$now_date);
                    }
                }
                //根据地区搜索
                if($request->has('goods_blade_type')&&$request->input('goods_blade_type')!='0'){
                    $goods_blade_type = $request->input('goods_blade_type');
+                   static::$DATA_STR .= '地区:'.$goods_blade_type."\r\n";
                    //按国家查询
                    $band = goods::get_area_blade($goods_blade_type);
                    //如果为中东地区
@@ -1425,7 +1437,7 @@ class OrderController extends Controller
          $data_log = [
              'filename'=>$filename
          ];
-       operation_log($ip,'导出订单',json_encode($data_log));
+       operation_log($ip,static::$DATA_STR,json_encode($data_log));
        if($goods_blade_type == 6 || $goods_blade_type == 7){
            $zdname=['下单时间','审核时间','订单编号','客户名字','客户电话','详细地址','地区','城市','县','邮寄地址','邮政编码','产品名称','产品英文名称','商品名','币种','总金额','数量','产品属性信息','产品英文属性信息','商品展示属性信息','商品sku信息','备注','支付方式','商品所属人','客服备注'];
        }else{
