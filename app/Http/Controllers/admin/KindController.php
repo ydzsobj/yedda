@@ -4,10 +4,12 @@ namespace App\Http\Controllers\admin;
 
 use App\admin;
 use App\channel\skuSDK;
+use App\config_val;
 use App\goods;
 use App\goods_config;
 use App\goods_kind;
 use App\kind_config;
+use App\kind_sku;
 use App\kind_val;
 use App\order;
 use App\product_type;
@@ -290,6 +292,38 @@ class KindController extends Controller
             }
         }
     }
+
+    /**
+     * 修改产品库存
+     * @param Request $request
+     */
+    public function sku_num(Request $request)
+    {
+        if($request->isMethod('get')){
+            $id = $request->input('id');
+            $goods_kind = \App\goods_kind::where('goods_kind_id',$id)->first();
+            $goods_kind->attrs = DB::table('kind_config as kc')->join('kind_val as kv','kc.kind_config_id','kv.kind_type_id','join')
+                ->where('kc.kind_primary_id',$goods_kind->goods_kind_id)->orderBy('kv.kind_type_id')->get();
+            //产品属性信息
+            $product_attr = goods_kind::attr_sku_product($goods_kind->goods_kind_id);
+            return view('admin.kind.sku_num',compact('goods_kind','product_attr'));
+        }else{
+            $input = $request->except('_token');
+
+            foreach($input['product'] as $val){
+                $where = ['kind_sku' => $val['kind_sku']];
+                $result = kind_sku::updateOrInsert($where,$val);
+            }
+
+            if($result){
+                return response()->json(['err' => 1, 'str' => '保存成功！']);
+            }else{
+                return response()->json(['err' => 0, 'str' => '保存失败！']);
+            }
+
+        }
+    }
+
 
 
     /** 修改产品页面

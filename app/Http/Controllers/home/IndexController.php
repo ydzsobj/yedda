@@ -5,9 +5,11 @@ namespace App\Http\Controllers\home;
 use App\channel\sendMessage;
 use App\channel\skuSDK;
 use App\channel\sms;
+use App\config_val;
 use App\currency_type;
 use App\goods_kind;
 use App\kind_config;
+use App\kind_sku;
 use App\kind_val;
 use App\special;
 use App\templet_show;
@@ -267,8 +269,11 @@ class IndexController extends Controller
             $cuxiao_num='null';
         }
         $goods_config=\DB::table('goods_config')
-        ->select('goods_config.goods_config_type','goods_config.goods_config_id','goods_config.goods_config_msg','goods_config.goods_config_order','config_val.config_diff_price','config_val.config_val_msg','config_val.config_val_img','config_val.config_val_id','config_val.config_type_id','config_val.config_isshow')
+//        ->select('goods_config.goods_config_type','goods_config.goods_config_id','goods_config.goods_config_msg','goods_config.goods_config_order','config_val.config_diff_price','config_val.config_val_msg','config_val.config_val_img','config_val.config_val_id','config_val.config_type_id','config_val.config_isshow')
+//        ->leftjoin('config_val','goods_config.goods_config_id','config_val.config_type_id')
+        ->select('goods_config.goods_config_type','goods_config.goods_config_id','goods_config.goods_config_msg','goods_config.goods_config_order','config_val.config_diff_price','config_val.config_val_msg','config_val.config_val_img','config_val.config_val_id','config_val.config_type_id','config_val.config_isshow','kind_config.kind_primary_id','config_val.kind_val_id')
         ->leftjoin('config_val','goods_config.goods_config_id','config_val.config_type_id')
+        ->leftjoin('kind_config','goods_config.kind_config_id','kind_config.kind_config_id')
         ->where(function($query)use($goods_id){
             $query->where('goods_config.goods_primary_id',$goods_id);
             $query->where('config_val.config_isshow','0');
@@ -296,11 +301,30 @@ class IndexController extends Controller
         ->orderBy('goods_config.goods_config_order','desc')
         ->get()->toArray();*/
         $sort=[];
+
         foreach($goods_config as $k => $v)
         {   
             $sort['id'.$v->goods_config_id][]=$v;
             //$sort[$v->goods_config_id]['sort']=$v->goods_config_order;
         }
+
+
+        if(count($sort)==1){
+                $num=1;$val_key = ['1'=>'sku_x45','2'=>'sku_x67','3'=>'sku_x89'];
+                foreach($sort as $key=>$value){
+                    foreach ($value as $k=>$v){
+                        $sort[$key][$k]->sku_x=$val_key[$num];
+                        $sku_num = $this->sku_num($v->kind_primary_id,$val_key[$num],$v->kind_val_id);
+                        $sort[$key][$k]->num = $sku_num;
+                        if($num==count($sort)) {
+                            $sort[$key][$k]->show = $sku_num == 0 ? '0' : '1';
+                        }
+                    }
+                    $num++;
+                }
+        }
+
+
         /*$order_sort = array_column($sort, 'sort');
         array_multisort($order_sort,SORT_DESC,$sort);
         foreach($sort as $k => $v){
@@ -1613,4 +1637,104 @@ class IndexController extends Controller
     $goods_cheap=\App\goods_cheap::select('goods_cheap_id','goods_cheap_type','goods_cheap_msg','goods_cheap_remark','goods_cheap_start_time')->where([['goods_cheap_goods_id',$goods_id],['goods_cheap_is_del','0'],['goods_cheap_is_ws','0'],['goods_cheap_start_time','<',date('Y-m-d H:i:s',time())]])->get();
      return  response()->json(['err' => 1, 'data' => $goods_cheap]);
   }
+
+
+
+    /*
+     * 获取sku库存数量
+    */
+    public function getskunum(Request $request)
+    {
+        $val_1 = $request->input('val_1');
+        $val_2 = $request->input('val_2');
+        $val_3 = $request->input('val_3');
+        $goods_id = $request->input('goods_id');
+        //$val_1 = '19111';$val_2 ='';$val_3='19422';$goods_id='1090';
+
+
+        $config_val = config_val::select('config_val_id','kind_val_id')->where('config_goods_id',$goods_id)->get()->toArray();
+        foreach($config_val as $item){
+            $val[$item['kind_val_id']]=$item['config_val_id'];
+        }
+
+
+        if($val_3=='0'){
+            $val_key = $val_1!=null?'sku_x45':'sku_x67';
+            $config_val_id = $val_1!=null?$val_1:$val_2;
+            $return_id =$val_1!=null?'sku_x67':'sku_x45';
+            $val_num = DB::table('config_val as cv')
+                ->leftjoin('kind_sku as ks','ks.'.$val_key,'=','cv.kind_val_id')
+                ->where('cv.config_val_id',$config_val_id)
+                ->get()->toArray();
+        }else{
+            if($val_1==''){
+                $return_id = 'sku_x45';
+                $val_num = DB::table('kind_sku as ks')
+                    ->leftjoin('config_val as cv2','cv2.kind_val_id','=','ks.sku_x67')
+                    ->where('cv2.config_val_id',$val_2)
+                    ->leftjoin('config_val as cv3','cv3.kind_val_id','=','ks.sku_x89')
+                    ->where('cv3.config_val_id',$val_3)
+                    ->get()->toArray();
+            }
+            if($val_2==''){
+                $return_id = 'sku_x67';
+                $val_num = DB::table('kind_sku as ks')
+                    ->leftjoin('config_val as cv','cv.kind_val_id','=','ks.sku_x45')
+                    ->where('cv.config_val_id',$val_1)
+                    ->leftjoin('config_val as cv3','cv3.kind_val_id','=','ks.sku_x89')
+                    ->where('cv3.config_val_id',$val_3)
+                    ->get()->toArray();
+            }
+            if($val_3==''){
+                $return_id = 'sku_x89';
+                $val_num = DB::table('kind_sku as ks')
+                    ->leftjoin('config_val as cv','cv.kind_val_id','=','ks.sku_x45')
+                    ->where('cv.config_val_id',$val_1)
+                    ->leftjoin('config_val as cv2','cv2.kind_val_id','=','ks.sku_x67')
+                    ->where('cv2.config_val_id',$val_2)
+                    ->get()->toArray();
+            }
+        }
+
+        $sku=[];
+        if(!empty($val_num)){
+            foreach($val_num as $key=>$value){
+
+                if($value->num==0){
+                        $sku[] = $val[$value->$return_id];
+                }
+
+            }
+        }
+
+        return $sku;
+    }
+
+    public function getsku($goods_kind_id)
+    {
+        return kind_sku::where('goods_kind_id',$goods_kind_id)->get();
+    }
+    public function sku_num($goods_kind_id,$sku_x,$sku_xx)
+    {
+
+        $skuArray = $this->getsku($goods_kind_id);
+        //$num = kind_sku::select('num')->where('goods_kind_id',$goods_kind_id)->where($sku_x,$sku_xx)->first();
+
+        if(!empty($skuArray)){
+            foreach($skuArray as $k=>$v){
+                if($v->$sku_x==$sku_xx){
+                    //return $v->num==0?'1':'0';
+                    return $v->num;
+                }
+            }
+        }
+
+
+    }
+
+
+
+
 }
+
+

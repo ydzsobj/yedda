@@ -60,6 +60,8 @@ use App\channel\mailControl;
 	Route::match(['get', 'post'], '/endfail','home\IndexController@endfail');
 	Route::match(['get', 'post'], '/expressCheckoutSuccess','home\IndexController@expressCheckoutSuccess');
 	Route::post('/customshippingmethod/countdown/index','home\SiteController@countdown');
+	//Route::match(['get', 'post'],'/gethtml','home\IndexController@gethtml');
+    Route::post('/getskunum','home\IndexController@getskunum');
 });
 Route::middleware([])->group(function(){
 
@@ -107,6 +109,7 @@ Route::middleware(['auth:check','checkadmin'])->group(function(){
 	Route::get('/admin/goods/cheap/del', 'admin\GoodsController@cheap_del');
 	Route::get('/admin/goods/lazy_load_change', 'admin\GoodsController@lazy_load_change');
 	Route::get('/admin/goods/api_goods', 'admin\GoodsController@api_goods');
+
 
 	//订单相关
 	Route::get('/admin/order/index','admin\OrderController@index');
@@ -217,6 +220,7 @@ Route::middleware(['auth:check','checkadmin'])->group(function(){
     Route::get('/admin/kind/del_sku','admin\KindController@del_sku');//释放产品
     Route::get('/admin/kind/sku_show','admin\KindController@sku_show');//产品SKU状态
     Route::any('/admin/kind/sku_search','admin\KindController@sku_search');//产品SKU查询
+    Route::any('/admin/kind/sku_num','admin\KindController@sku_num');//管理SKU库存
     Route::any('/admin/kind/outkind','admin\KindController@outkind');//产品导出
     //辅助工具
     Route::any('/admin/message/send_phone','admin\ToolController@send_phone');//短信推送

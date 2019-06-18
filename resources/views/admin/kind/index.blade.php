@@ -364,6 +364,7 @@
                         <div class="layui-card-body">
                             <table class="" id="test-table-operate" lay-filter="test-table-operates"></table>
                             <script type="text/html" id="test-table-operate-barDemo">
+                                <a class="layui-btn layui-btn-xs" title="修改产品库存" lay-event="sku"><i class="layui-icon">&#xe6df;</i></a>
                                 <a class="layui-btn layui-btn-xs" title="修改产品属性" lay-event="edit"><i class="layui-icon">&#xe642;</i></a>
                                 <a class="layui-btn layui-btn-danger layui-btn-xs" title="删除产品" lay-event="del"><i
                                             class="layui-icon">&#xe640;</i></a>
@@ -412,7 +413,7 @@
                     ,{field:'goods_kind_postage',align:'center',width: 80,title: '邮费'}
                     ,{title: 'SKU绑定状态',align:'center',width: 80,templet: '#test-table-sku'}
                     ,{field:'goods_kind_time',width: 160,align:'center', title: '添加时间', sort: true}
-                    ,{width:150, align:'center', title: '操作', toolbar: '#test-table-operate-barDemo'}
+                    ,{width:200, align:'center', title: '操作', toolbar: '#test-table-operate-barDemo'}
                 ]]
                 ,page: true
             });
@@ -492,6 +493,9 @@
                         } else if (obj.event === 'edit') {
                             //修改产品
                             that.goods_show('修改产品属性', '{{url("admin/kind/upgoods_kind")}}?id=' + data.goods_kind_id, 2, 1400, 800);
+                        } else if (obj.event === 'sku') {
+                            //修改产品库存
+                            that.goods_show('修改产品库存', '{{url("admin/kind/sku_num")}}?id=' + data.goods_kind_id, 2, 900, 800);
                         } else if (obj.event === 'release') {
                             //释放sku
                             var msg = confirm("确定要释放此产品SKU吗？！！一旦释放无法恢复，请确定此产品不再使用！！！");

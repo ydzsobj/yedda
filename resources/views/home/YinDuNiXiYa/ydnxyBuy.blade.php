@@ -438,7 +438,7 @@ function jianshu(a){
      if (num) { result = num + result; }
      return result;
 };
-  var cuxiao_num={!!$cuxiao_num!!};  //如果有默认数量；
+  var cuxiao_num={!!$cuxiao_num!!}; //如果有默认数量；
   var a={!!$goods_config_arr!!};
   var moneycoin="{{\App\currency_type::where('currency_type_id',$goods->goods_currency_id)->first()['currency_type_name']}}";
   var issubmit=true;
@@ -527,7 +527,7 @@ var payFun=function (){
         datasObj[val.name]=val.value;
     })
     datasObj.specNumber=$("#addcart-quantity-val").val();  //商品件数
-    datasObj.goodsAtt=dataObj;                             //商品属性；
+    datasObj.goodsAtt=dataObj;                          //商品属性；
     console.log('zuihou',datasObj);
     /*$('#save').submit();*/
     if(datasObj.address1==null||datasObj.address1==''){
@@ -795,6 +795,15 @@ jQuery(function(){
 
 <script type="text/javascript">
     $(function(){
+        $.ajax({
+            url:"{{url('/getskunum')}}",
+            type:'post',
+            data:{'val_1':'13406','val_2':'','val_3':'0','goods_id':'416','_token':"{{csrf_token()}}"},
+            success:function(sk){
+                console.log(sk);
+            }
+
+        });
         $.ajax({
                 url:"{{url('/gethtml')}}",
                 type:'post',
