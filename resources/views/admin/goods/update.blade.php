@@ -749,7 +749,10 @@
         },
         commentdatemax:{
             required:true,
-        }
+		},
+		goods_cuxiao_name:{
+			maxlength:100
+		}
     };
 	//验证函数(价格)
 	function price(){

@@ -868,7 +868,10 @@
         },
 		goods_kind_name:{
             required:true,
-        },
+		},
+		goods_cuxiao_name:{
+			maxlength:100
+		}
     };
 
     //验证函数(公司标识)
