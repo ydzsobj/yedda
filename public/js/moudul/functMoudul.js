@@ -19,8 +19,10 @@ function addAttribu(cuxiao_num,a) {
         var color25="";
         var eNum=$("#goods_config_div form").length+1;
         var flag=false;
+        var x = 0;
         $.each(a,function(i,val){
-        // console.log(i,val);
+            x++
+        console.log(i,x,val);
             if(val){flag=true};     
             var colorBut='';
             var imgNum=0;
@@ -35,15 +37,15 @@ function addAttribu(cuxiao_num,a) {
             $.each(val,function(j,item){
              if(item.config_val_img){     //如果是展示图片的话显示这一组HTML；
                 if(j===0){
-                    colorBut= '<label><input type="radio" style="display: none;" class="radio" name="goods'+item.goods_config_id +'" value="'+item.config_val_id+'" id="'+e+item.goods_config_id+item.config_val_id+'" ><label class="uncheck" style="margin-bottom: 4px;width: '+imgWidth+';text-align: center;display:inline-block" for="'+e+item.goods_config_id+item.config_val_id+'"><img src="'+item.config_val_img+'" alt="">'+ item.config_val_msg +'</label>&nbsp;</label>';
+                    colorBut= '<label><input type="radio" style="display: none;" class="radio" data-i="'+x+'" name="goods'+item.goods_config_id +'" value="'+item.config_val_id+'" id="'+e+item.goods_config_id+item.config_val_id+'" ><label class="uncheck" style="margin-bottom: 4px;width: '+imgWidth+';text-align: center;display:inline-block" for="'+e+item.goods_config_id+item.config_val_id+'"><img src="'+item.config_val_img+'" alt="">'+ item.config_val_msg +'</label>&nbsp;</label>';
                 }else{
-                    colorBut+= '<label><input type="radio" style="display: none;" class="radio" name="goods'+item.goods_config_id +'" value="'+item.config_val_id+'" id="'+e+item.goods_config_id+item.config_val_id+'"><label class="uncheck" style="margin-bottom: 4px;width: '+imgWidth+';text-align: center;display:inline-block" for="'+e+item.goods_config_id+item.config_val_id+'"><img src="'+item.config_val_img+'" alt="">'+ item.config_val_msg +'</label>&nbsp;</label>';
+                    colorBut+= '<label><input type="radio" style="display: none;" class="radio" data-i="'+x+'" name="goods'+item.goods_config_id +'" value="'+item.config_val_id+'" id="'+e+item.goods_config_id+item.config_val_id+'"><label class="uncheck" style="margin-bottom: 4px;width: '+imgWidth+';text-align: center;display:inline-block" for="'+e+item.goods_config_id+item.config_val_id+'"><img src="'+item.config_val_img+'" alt="">'+ item.config_val_msg +'</label>&nbsp;</label>';
                 }        
               }else{
                 if(j===0){
-                    colorBut= '<label style="display:inline-block;margin-bottom: 4px"><input type="radio" style="visibility: hidden;" class="radio" name="goods'+item.goods_config_id +'" value="'+item.config_val_id+'" id="'+e+item.goods_config_id+item.config_val_id+'" ><label for="'+e+item.goods_config_id+item.config_val_id+'" class="uncheck">&nbsp;&nbsp;'+ item.config_val_msg +'&nbsp;&nbsp;</label>&nbsp</label>';
+                    colorBut= '<label style="display:inline-block;margin-bottom: 4px;margin-right: 6px;"><input type="radio" style="visibility: hidden;display: none;" class="radio" data-i="'+x+'" name="goods'+item.goods_config_id +'" value="'+item.config_val_id+'" id="'+e+item.goods_config_id+item.config_val_id+'" ><label for="'+e+item.goods_config_id+item.config_val_id+'" class="uncheck">&nbsp;&nbsp;'+ item.config_val_msg +'&nbsp;&nbsp;</label></label>';
                 }else{
-                    colorBut+= '<label style="display:inline-block;margin-bottom: 4px"><input type="radio" style="visibility: hidden;" class="radio" name="goods'+item.goods_config_id +'" value="'+item.config_val_id+'" id="'+e+item.goods_config_id+item.config_val_id+'"><label for="'+e+item.goods_config_id+item.config_val_id+'" class="uncheck">&nbsp;&nbsp;'+ item.config_val_msg +'&nbsp;&nbsp;</label>&nbsp</label>';
+                    colorBut+= '<label style="display:inline-block;margin-bottom: 4px;margin-right: 6px;"><input type="radio" style="visibility: hidden;display: none;" class="radio" data-i="'+x+'" name="goods'+item.goods_config_id +'" value="'+item.config_val_id+'" id="'+e+item.goods_config_id+item.config_val_id+'"><label for="'+e+item.goods_config_id+item.config_val_id+'" class="uncheck">&nbsp;&nbsp;'+ item.config_val_msg +'&nbsp;&nbsp;</label></label>';
                 }
               }
                
@@ -796,3 +798,115 @@ function addwsMsg(data){
     $("#addwsMsg").animate({top:"0"},'slow')
     setTimeout(function(){$("#addwsMsg").animate({top:"-88px"},'slow')},3000);
 }
+function siblings(elm) {
+    var a = [];
+    var p = elm.parentNode.children;
+    for(var i =1,pl= p.length;i<pl;i++) {
+     if(p[i] !== elm) a.push($(p[i]));
+    }
+    return a;
+   }
+$(function(){
+$('body').on('touchend','#goods_config_div label[for]',function(){
+    if($(this).prev().attr('disabled') =='disabled') {
+        return false
+    }
+    $(this).parents('form').find('input[type="radio"]').attr('disabled',false);
+    $(this).parents('form').find('input[type="radio"]').next().removeClass('forbid');
+    var id = $(this).prev().attr('value');
+    var key = $(this).prev().attr('data-i');
+    var then =$(this);
+    if($(this).parents('form').children().length == 3){
+        if(key==1){
+        var data={'val_1':id,'val_2':'','val_3':'0','goods_id':datasObj.goods_id,'_token':token};
+    }else if(key == 2){
+        var data={'val_1':'','val_2':id,'val_3':'0','goods_id':datasObj.goods_id,'_token':token};
+    }
+        $.ajax({
+        url:'/getskunum',
+        type:'post',
+        data:data,
+        success:function(res){
+            if(res.length!=0){
+                for (let i = 0; i < res.length; i++) {
+                    then.parents('form').find('input[value="'+res[i]+'"]').next().addClass('forbid')
+                    then.parents('form').find('input[value="'+res[i]+'"]').attr("disabled","disabled")
+                }
+            }
+        }
+    
+    });
+    }else if($(this).parents('form').children().length > 3){
+        var data={'val_1':'','val_2':'','val_3':'','goods_id':datasObj.goods_id,'_token':token};
+        var arr=[{"key": key, "id": id}]
+        var str=siblings($(this).parent().parent().parent()[0].parentNode);
+        $.each(str,function(){
+            if($(this).find("input[type='radio']:checked").length!=0){
+                var ids={}
+                ids.key=$(this).find("input[type='radio']:checked").attr('data-i')
+                ids.id=$(this).find("input[type='radio']:checked").attr('value')
+                arr.push(ids)
+            }
+          });
+          if(arr.length >=2){
+            if(arr.length ==2){
+                for (let i = 0; i < arr.length; i++) {
+                    if(arr[i].key==1){
+                        data.val_1=arr[i].id;
+                    }else if(arr[i].key==2){
+                        data.val_2=arr[i].id;
+                    }else if(arr[i].key==3){
+                        data.val_3=arr[i].id;
+                    }
+                    
+                }
+            }else if(arr.length >2){
+                if(arr[0].key==1){
+                    for (let i = 0; i < arr.length; i++) {
+                        if(arr[i].key==1){
+                            data.val_1=arr[i].id;
+                        }else if(arr[i].key==3){
+                            data.val_3=arr[i].id;
+                        }
+                        
+                    }
+                }else if(arr[0].key==2){
+                    for (let i = 0; i < arr.length; i++) {
+                        if(arr[i].key==1){
+                            data.val_1=arr[i].id;
+                        }else if(arr[i].key==2){
+                            data.val_2=arr[i].id;
+                        }
+                        
+                    }
+                }else if(arr[0].key==3){
+                    for (let i = 0; i < arr.length; i++) {
+                        if(arr[i].key==1){
+                            data.val_1=arr[i].id;
+                        }else if(arr[i].key==3){
+                            data.val_3=arr[i].id;
+                        }
+                        
+                    }
+                }
+                
+            }
+            $.ajax({
+                url:'/getskunum',
+                type:'post',
+                data:data,
+                success:function(res){
+                    if(res.length!=0){
+                        for (let i = 0; i < res.length; i++) {
+                            then.parents('form').find('input[value="'+res[i]+'"]').next().addClass('forbid')
+                            then.parents('form').find('input[value="'+res[i]+'"]').attr("disabled","disabled")
+                        }
+                    }
+                }
+            
+            });
+          }
+    }
+
+})
+});

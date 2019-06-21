@@ -1090,6 +1090,7 @@ $(function(){
 });
 </script>
         <script>
+            var token = "{{csrf_token()}}";
         jQuery(function(){setFrom();});
         $('.size').click(function(){
             if($("#taorbg",parent.document)==0){

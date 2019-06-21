@@ -1110,6 +1110,7 @@ jQuery(function(){
 </script>
 
 <script>
+    var token = "{{csrf_token()}}";
     var isuse =true;
 jQuery(function(){
        $('#save input').on('input',function(){
