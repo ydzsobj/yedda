@@ -219,7 +219,7 @@
                <p style="margin-bottom:0;"></p>
 				<div class="buyinfo_note" style=" line-height:16px;">
 					<strong>Peringatan :</strong>
-					Jika ada pertanyaan setelah terima barang, silakan hubungi layanan pelanggan online kami atau kirim email ke<a href='mail:rbzjlprc@gmail.com' style='color:#F8770E'>rbzjlprc@gmail.com</a>.Harap informasikan juga nama/ nomor HP/nomor pesanan,kami akan segera memecahkan pertanyaan Anda. Semoga belanja Anda menyenangkan.</div>
+					Jika ada pertanyaan setelah terima barang, silakan hubungi layanan pelanggan online kami atau kirim email ke<a href='mail:servis@fleekgo.com' style='color:#F8770E'>servis@fleekgo.com</a>.Harap informasikan juga nama/ nomor HP/nomor pesanan,kami akan segera memecahkan pertanyaan Anda. Semoga belanja Anda menyenangkan.</div>
 				<p></p>
   			</div>
 		</div>

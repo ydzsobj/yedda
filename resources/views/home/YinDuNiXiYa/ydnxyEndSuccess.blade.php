@@ -94,7 +94,7 @@
                             Yang harus dibayar :<font color="red">{{\App\currency_type::where('currency_type_id',$goods->goods_currency_id)->first()['currency_type_name']}} {{price_format($order->order_price)}}</font>
                             </div>
                                 <div style="text-align:left;padding:10px 15px 20px">
-                                            Mohon menjaga HP Anda tetap aktif, supaya pengirim mudah hubungi Anda. Jika ada pertanyaan, silakan hubungi layanan pelanggan online kami. Semoga belanja Anda menyenangkan !<a href="mailto:rbzjlprc@gmail.com" style="color:#F8770E">rbzjlprc@gmail.com</a>        </div>            </div>
+                                            Mohon menjaga HP Anda tetap aktif, supaya pengirim mudah hubungi Anda. Jika ada pertanyaan, silakan hubungi layanan pelanggan online kami. Semoga belanja Anda menyenangkan !<a href="mailto:servis@fleekgo.com" style="color:#F8770E">servis@fleekgo.com</a>        </div>            </div>
             <div align="center" style="padding:0px 15px">
                 <button type="button" class="succuss_center_a" style="" onclick="goHome()">kembali ke beranda&gt;&gt;</button>
             </div>
@@ -150,7 +150,7 @@
 <div class="m-orderItem">
     <div class="reminder_title"><i class="reminder_icon"></i>catatan</div>
     <div class="reminder">
-    Tips: Dapat cash on delivery + gratis ongkir + periode apresiasi dalam tujuh hari.Jika anda ada pertanyaan setelah menerima item Silakan hubungi layanan online kami atau kirim email ke alamat email layanan customer kami <a href="mailto:rbzjlprc@gmail.com" style="color:#F8770E">rbzjlprc@gmail.com</a>.Ingat untuk memasukkan nama dan nomor pesanan anda dalam email.Kami akan segera membalas anda! Happy shopping
+    Tips: Dapat cash on delivery + gratis ongkir + periode apresiasi dalam tujuh hari.Jika anda ada pertanyaan setelah menerima item Silakan hubungi layanan online kami atau kirim email ke alamat email layanan customer kami <a href="mailto:servis@fleekgo.com" style="color:#F8770E">servis@fleekgo.com</a>.Ingat untuk memasukkan nama dan nomor pesanan anda dalam email.Kami akan segera membalas anda! Happy shopping
     </div>
 </div>
 <div class="timetips">
