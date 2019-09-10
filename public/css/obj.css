@@ -347,7 +347,7 @@ background:#e7e7e7 !important;
 html{overflow-x:hidden;}
 		.data-table th {
 			background: none repeat scroll 0% 0% rgb(244, 244, 244);
-			text-transform: uppercase;
+			/* text-transform: uppercase; */
 			font-family: "Arial";
 			white-space: nowrap;
 		}
@@ -653,7 +653,7 @@ html{overflow-x:hidden;}
 		}
 		.data-table th {
 			background: none repeat scroll 0% 0% rgb(244, 244, 244);
-			text-transform: uppercase;
+			/* text-transform: uppercase; */
 			font-family: "Arial";
 			white-space: nowrap;
 		}
@@ -711,7 +711,7 @@ html{overflow-x:hidden;}
 		}
 		.data-table th {
 			background: none repeat scroll 0% 0% rgb(244, 244, 244);
-			text-transform: uppercase;
+			/* text-transform: uppercase; */
 			font-family: "Arial";
 			white-space: nowrap;
 		}

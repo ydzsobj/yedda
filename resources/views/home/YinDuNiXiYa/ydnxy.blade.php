@@ -400,7 +400,7 @@ s.parentNode.insertBefore(atag, s);
                @endif
                         <div class="go-appraise" style=" background:#fff; border:none;">
                 <a id="btnAppr" style=" color:#fff; width:300px;">
-                  penilaian saya       </a>
+                Tambahkan Ulasan       </a>
             </div>
                     </div>
         <!--div class="f-adv-img"><img src="http://oatsbasf.3cshoper.com/mobile/images/footer.png"></div-->
@@ -425,7 +425,7 @@ s.parentNode.insertBefore(atag, s);
         {{--@endif--}}
 {{--        @if(in_array('apply_goods',$templets))--}}
         <tr class="first odd">
-            <th colspan="2" style="background-color: #d2d2d2;text-align: left;">.cara penggantian dan pengembalian</th>
+            <th colspan="2" style="background-color: #d2d2d2;text-align: left;">Cara penggantian dan pengembalian</th>
         </tr>
         <tr class="first odd">
             <td colspan="2">
@@ -455,7 +455,7 @@ Dalam 7 hari dari tanggal penerimaan barang,silakan kirim email ke bagian layana
             </td></tr>
         {{--@endif--}}
         <tr class="first odd">
-            <th colspan="2" style="background-color: #d2d2d2;text-align: left;">.alur penggantian dan pengembalian</th>
+            <th colspan="2" style="background-color: #d2d2d2;text-align: left;">Alur penggantian dan pengembalian</th>
         </tr>
         <tr class="first odd">
             <td colspan="2">
@@ -472,7 +472,7 @@ Dalam 7 hari dari tanggal penerimaan barang,silakan kirim email ke bagian layana
             <td colspan="2">
                
                
-                <p>fleekfly adalah online mall yang memilih produk dengan sikap yang ketat mengikuti secara konsisten, Menyebar ke seluruh dunia, secara ketat mengontrol asal produk, baik komoditas kerajinan, bahan baku, pakaian, tas dan sepatu, peralatan rumah tangga,  peralatan dapur, olahraga dll. Kami berusaha memberikan produk kualitas terbaik kepada Anda .</p>
+                <p>Fleekfly adalah online mall yang memilih produk dengan sikap yang ketat mengikuti secara konsisten, Menyebar ke seluruh dunia, secara ketat mengontrol asal produk, baik komoditas kerajinan, bahan baku, pakaian, tas dan sepatu, peralatan rumah tangga,  peralatan dapur, olahraga dll. Kami berusaha memberikan produk kualitas terbaik kepada Anda .</p>
                 
             </td>
 
