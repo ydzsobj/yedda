@@ -258,13 +258,13 @@ s.parentNode.insertBefore(atag, s);
         @endif
     </div>
     @if(in_array('free_freight',$templets))
-        <span class="flag" style="font-size: 12px;">Gratis biaya pengiriman</span>
+        <span class="flag" style="font-size: 12px;">Gratis Biaya Ongkir</span>
     @endif
     @if(in_array('cash_on_delivery',$templets))
-        <span class="flag" style="font-size: 12px;">Bayar setelah terima barang</span>
+        <span class="flag" style="font-size: 12px;">Bayar Setelah Menerima Barang</span>
     @endif
     @if(in_array('seven_days',$templets))
-        <span class="flag" style="font-size: 12px;background:#000;">penggantian dan pengembalian 7 hari</span>
+        <span class="flag" style="font-size: 12px;background:#000;">Penggantian dan pengembalian 7 hari</span>
     @endif
 </div>
 @endif
@@ -313,7 +313,7 @@ s.parentNode.insertBefore(atag, s);
     @if(in_array('evaluate',$templets))
     <li>
         <span href="#detial-appraise" class="scrollBar" scroll-y="85">
-        penilaian ({{$goods->goods_comment_num}}+)
+        Ulasan ({{$goods->goods_comment_num}}+)
         </span>
     </li>
     @endif
@@ -365,7 +365,7 @@ s.parentNode.insertBefore(atag, s);
         <div class="detail-block" style="position:relative;padding-bottom:0px;" id="detial-appraise">
             {{--@if($goods->goods_comment_num!=0||$goods->goods_comment_num!=''||$goods->goods_comment_num!=null)--}}
             @if(in_array('commit',$templets))
-                        <h4>penilaian terbaru</h4>
+                        <h4>Ulasan Terbaru</h4>
                             <div id="mq">
                     <div id="mq1">
                     	@foreach($comment as $v)
@@ -413,7 +413,7 @@ s.parentNode.insertBefore(atag, s);
     <tbody>
         {{--@if(in_array('user_know',$templets))--}}
         <tr class="first odd">
-            <th colspan="2" style="background-color: #d2d2d2;text-align: left;">.peringatan</th>
+            <th colspan="2" style="background-color: #d2d2d2;text-align: left;">Perhatikan</th>
         </tr>
         <tr class="first odd">
             <td colspan="2">
