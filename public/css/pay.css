@@ -1041,3 +1041,6 @@ button.bunble{ margin-top:10px;}
 	color:#fff;
 	text-align: center;
 }
+#goods_config_div{
+   overflow-wrap: break-word;
+}
