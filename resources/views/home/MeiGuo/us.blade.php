@@ -518,7 +518,7 @@
                 <p>
                 Return available within 14 days after acquired.We will process it ASAP. <br>
                 If you have any questions, please feel free to contact our Customer Care Team(
-                                        <a href="https://mail.google.com/mail/" style="color:#F8770E">isnfclpo@gmail.com</a>
+                                        <a href="https://mail.google.com/mail/" style="color:#F8770E">rbzjlprc@gmail.com</a>
                                         ) for assistance. </p>
             </td></tr> -->
         {{--@endif--}}
@@ -535,9 +535,9 @@
                 24H Online Customer Service: <a href="javascript:void(0);"><img src="https://d1lnephkr7mkjn.cloudfront.net/skin/image/service.png" style=" width:15px; height:auto;"></a>
                 <br>Email:
 
-                                <a  href="mailto:isnfclpo@gmail.com" style="color:#F8770E">isnfclpo@gmail.com</a>
+                                <a  href="mailto:rbzjlprc@gmail.com" style="color:#F8770E">rbzjlprc@gmail.com</a>
                                 <br>
-                                Questions, comments and requests regarding the website policies are welcomed and should be addressed to isnfclpo@gmail.com. Please feel free to contact our Customer Care Team for assistance. </p>
+                                Questions, comments and requests regarding the website policies are welcomed and should be addressed to rbzjlprc@gmail.com. Please feel free to contact our Customer Care Team for assistance. </p>
             </td></tr>
         {{--@endif--}}
         <tr class="first odd">

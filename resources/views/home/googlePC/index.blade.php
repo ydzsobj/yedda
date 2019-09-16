@@ -403,9 +403,9 @@
                                     <p> 24H Online Customer Service: <a href="javascript:void(0);"><img src="/img/service.png" style=" width:15px; height:auto;"></a>
                 <br>Email:
 
-                                <a  href="mailto:isnfclpo@gmail.com" style="color:#F8770E">isnfclpo@gmail.com</a>
+                                <a  href="mailto:rbzjlprc@gmail.com" style="color:#F8770E">rbzjlprc@gmail.com</a>
                                 <br>
-                                Questions, comments and requests regarding the website policies are welcomed and should be addressed to isnfclpo@gmail.com. Please feel free to contact our Customer Care Team for assistance. </p>
+                                Questions, comments and requests regarding the website policies are welcomed and should be addressed to rbzjlprc@gmail.com. Please feel free to contact our Customer Care Team for assistance. </p>
                                 </p></div>
                             {{--@endif--}}
 {{--                            @if(in_array('apply_goods',$templets))--}}

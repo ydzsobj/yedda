@@ -192,7 +192,7 @@
 				<div class="col-xs-8 addr-agileits2">
 					<div class="addr-w3l">
 						<h3>Email Us</h3>
-						<p><a href="mailto:isnfclpo@gmail.com">isnfclpo@gmail.com</a></p>
+						<p><a href="mailto:rbzjlprc@gmail.com">rbzjlprc@gmail.com</a></p>
 						
 					</div>	
 				</div>

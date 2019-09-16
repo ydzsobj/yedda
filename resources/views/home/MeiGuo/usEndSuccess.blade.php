@@ -1,4 +1,4 @@
-<!-- Please keep your mobile phone unblocked, so that the courier can contact you in time. If you have any questions, please contact our online customer service in time. Have fun shopping!        <a href="mailto:isnfclpo@gmail.com" style="color:#F8770E">isnfclpo@gmail.com</a> -->
+<!-- Please keep your mobile phone unblocked, so that the courier can contact you in time. If you have any questions, please contact our online customer service in time. Have fun shopping!        <a href="mailto:rbzjlprc@gmail.com" style="color:#F8770E">rbzjlprc@gmail.com</a> -->
 <head>
 <meta http-equiv="content-Type" content="text/html; charset=utf-8">
         <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport" />
@@ -123,7 +123,7 @@
 <div class="m-orderItem">
     <div class="reminder_title"><i class="reminder_icon"></i>Notice</div>
     <div class="reminder">
-    Tips: Support cash on delivery+ Free shipping+ Seven days appreciation period. If you have any questions after receiving the good, please contact with our online service or send email to <a href="mailto:isnfclpo@gmail.com" style="color:#F8770E">isnfclpo@gmail.com</a>. Please remember to attach your name and order number in the message. We will reply you as soon as possible! Wish you a happy shopping!
+    Tips: Support cash on delivery+ Free shipping+ Seven days appreciation period. If you have any questions after receiving the good, please contact with our online service or send email to <a href="mailto:rbzjlprc@gmail.com" style="color:#F8770E">rbzjlprc@gmail.com</a>. Please remember to attach your name and order number in the message. We will reply you as soon as possible! Wish you a happy shopping!
     </div>
 </div>
 <div class="timetips">

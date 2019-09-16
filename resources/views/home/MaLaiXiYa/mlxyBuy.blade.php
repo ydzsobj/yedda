@@ -377,7 +377,7 @@
     <!--把最下方的底部内容抽象到newfooter中-->
     <div class="newfooter">
     <!-- Warm Tips: available for Free shipping+ Cash on delivery + Return or exchange of goods without reasons by 7 days after acquired. If you have any questions about our products, please contact our online Customer Service Team, or send email to  
-        <a href="mailto:isnfclpo@gmail.com" style="color:#F8770E">isnfclpo@gmail.com</a>. -->
+        <a href="mailto:rbzjlprc@gmail.com" style="color:#F8770E">rbzjlprc@gmail.com</a>. -->
     </div><!--footer end-->
     <div id="couponbg" style="display:none; position:fixed;z-index:99998; width:100%; height:100%; background:black; padding:0px; bottom:0px; margin:0px; opacity:0.7; max-width: 640px;">       
 </div>
