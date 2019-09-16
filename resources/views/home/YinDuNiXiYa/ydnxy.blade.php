@@ -419,7 +419,7 @@ s.parentNode.insertBefore(atag, s);
             <td colspan="2">
                 <p>
                 Hasil penggunaan sebenarnya produk ini ditentukan oleh keadaan pribadi, tidak bisa menjamin semua pengguna dapat menikmati efek promosi.Kalau ada pertanyaan,bisa hubungi kami via layanan pengguna online atau email(
-                                        <a href="mail:servis@fleekgo.com" style="color:#F8770E">servis@fleekgo.com</a>
+                                        <a href="mail:rbzjlprc@gmail.com" style="color:#F8770E">rbzjlprc@gmail.com</a>
                                         ),perusahaan kami memiliki hak interpretasi akhir.</p>
             </td></tr>
         {{--@endif--}}
@@ -430,15 +430,15 @@ s.parentNode.insertBefore(atag, s);
         <tr class="first odd">
             <td colspan="2">
             <p>
-            1.	Alasan pribadi:Dalam 7 hari dari tanggal penerimaan barang dan tidak mempengaruhi penjualan lagi.Silakan hubungi layanan pelanggan online kami atau kirim email ke<a  href="mail:servis@fleekgo.com" style="color:#F8770E">servis@fleekgo.com</a>. Setelah terima permintaan Anda,bagian layanan pelanggan kami akan mengurus dalam 1-3 hari kerja,ongkos penggantian dan pengembalian dibayarkan oleh pelanggan sendiri.<br>
+            1.	Alasan pribadi:Dalam 7 hari dari tanggal penerimaan barang dan tidak mempengaruhi penjualan lagi.Silakan hubungi layanan pelanggan online kami atau kirim email ke<a  href="mail:rbzjlprc@gmail.com" style="color:#F8770E">rbzjlprc@gmail.com</a>. Setelah terima permintaan Anda,bagian layanan pelanggan kami akan mengurus dalam 1-3 hari kerja,ongkos penggantian dan pengembalian dibayarkan oleh pelanggan sendiri.<br>
 
 
              2.Alasan kualitas:
-Dalam 7 hari dari tanggal penerimaan barang,silakan kirim email ke bagian layanan pelanggan kami <a href="mail:servis@fleekgo.com" style="color:#F8770E">servis@fleekgo.com</a>, bagian layanan pelanggan kami akan mengurus permintaan Anda dalam 1-3 hari kerja,ongkos penggantian dan pengembalian dibayarkan oleh perusahaan kami.</p>
+Dalam 7 hari dari tanggal penerimaan barang,silakan kirim email ke bagian layanan pelanggan kami <a href="mail:rbzjlprc@gmail.com" style="color:#F8770E">rbzjlprc@gmail.com</a>, bagian layanan pelanggan kami akan mengurus permintaan Anda dalam 1-3 hari kerja,ongkos penggantian dan pengembalian dibayarkan oleh perusahaan kami.</p>
                 <!-- <p>1.由於個人原因
                     需自行承擔。</p>產生的退換貨：至收到商品之日起7天內，在不影響二次銷
                     售的情況下請聯繫我們的在線客服或發郵件至
-                                        <a href="mail:servis@fleekgo.com" style="color:#F8770E">servis@fleekgo.com</a>
+                                        <a href="mail:rbzjlprc@gmail.com" style="color:#F8770E">rbzjlprc@gmail.com</a>
                                         ，售後
 
                     客服會在收到消息後的1-3個工作日內受理您的請求，退換貨所產生的運費
@@ -447,7 +447,7 @@ Dalam 7 hari dari tanggal penerimaan barang,silakan kirim email ke bagian layana
                     2.由於質量原因產生的退換貨：至收到商品之日起7天內，向售後服務中心
 
                     發送郵件至
-                                        <a href="mail:servis@fleekgo.com" style="color:#F8770E">servis@fleekgo.com</a>
+                                        <a href="mail:rbzjlprc@gmail.com" style="color:#F8770E">rbzjlprc@gmail.com</a>
                                         ，客服會在收到郵件後的1-3個工作日內受
 
                     理您的請求，退換貨所產生的運費由我方承擔。

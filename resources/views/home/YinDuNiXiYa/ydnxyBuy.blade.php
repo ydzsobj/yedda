@@ -402,7 +402,7 @@ Informasi di atas akan dijaga kerahasiaannya dan kami menjamin bahwa kami tidak 
     <!--把最下方的底部内容抽象到newfooter中-->
     <div class="newfooter">
     Peringatan: Bisa bayar setelah terima barang + gratis bayar pengiriman + penggantian dan pengembalian barang 7 hari ! Jika ada pertanyaan setelah terima barang, silakan hubungi layanan pelanggan online kami atau kirim email ke 
-        <a href="mailto:servis@fleekgo.com" style="color:#F8770E">servis@fleekgo.com</a>.
+        <a href="mailto:rbzjlprc@gmail.com" style="color:#F8770E">rbzjlprc@gmail.com</a>.
     </div><!--footer end-->
     <div id="couponbg" style="display:none; position:fixed;z-index:99998; width:100%; height:100%; background:black; padding:0px; bottom:0px; margin:0px; opacity:0.7; max-width: 640px;">       
 </div>
