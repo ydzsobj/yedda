@@ -1,6 +1,6 @@
 <div class="footer4">
     <div class="baozhang">
-        <div class="buy-logo"><img src="{{asset('img/site_img/buy-logo.png')}}"></div>
+        <div class="buy-logo"><img src="/img/site_img/buy-logo.png"></div>
         <div class="buy-p">
            {!! config("language.footer-promess.".\App\goods::get_language($site->sites_blade_type)) !!}
         

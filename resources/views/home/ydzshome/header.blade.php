@@ -18,13 +18,13 @@
     <link rel="stylesheet" type="text/css" href="/css/site_css/style.css" media="all"/>
     <link rel="stylesheet" type="text/css" href="/css/site_css/swiper.min.css" media="all"/>
     <link rel="stylesheet" type="text/css" href="/css/site_css/public.css" media="all"/>
-    <script type="text/javascript" src="/js/site_js/prototype.js') }}"></script>
-    <script type="text/javascript" src="/js/site_js/jquery-1.10.2.min.js') }}"></script>
-    <script type="text/javascript" src="/js/site_js/noconflict.js') }}"></script>
-    <script type="text/javascript" src="/js/site_js/validation.js') }}"></script>
-    <script type="text/javascript" src="/js/site_js/js.js') }}"></script>
-    <script type="text/javascript" src="/js/site_js/form.js') }}"></script>
-    <script type="text/javascript" src="/js/site_js/translate.js') }}"></script>
+    <script type="text/javascript" src="/js/site_js/prototype.js"></script>
+    <script type="text/javascript" src="/js/site_js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="/js/site_js/noconflict.js"></script>
+    <script type="text/javascript" src="/js/site_js/validation.js"></script>
+    <script type="text/javascript" src="/js/site_js/js.js"></script>
+    <script type="text/javascript" src="/js/site_js/form.js"></script>
+    <script type="text/javascript" src="/js/site_js/translate.js"></script>
     {{--    <script type="text/javascript" src="{{ asset('js/site_js/cookies.') }}"></script>--}}
     <script type="text/javascript" src="/js/site_js/simple-share.js"></script>
     <script type="text/javascript" src="/js/site_js/total.js"></script>
@@ -104,7 +104,7 @@
 <header class="maintop">
     <div class="header">
         <a href="javascript:void(0);" id="cd-menu-trigger"><span class="cd-menu-icon"></span></a>
-        <a href="/"><img alt="{{ $site->sites_name }}" src="{{ asset('img/site.png') }}"/></a>
+        <a href="/"><img alt="{{ $site->sites_name }}" src="/img/site.png"/></a>
         <a href="#" class="seach newiconfont newicon-sousuotiaofangdajingqz11" data-animation="fade"
            data-reveal-id="myModal"></a>
     </div>
