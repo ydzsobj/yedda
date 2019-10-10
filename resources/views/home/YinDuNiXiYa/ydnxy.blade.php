@@ -206,11 +206,11 @@ s.parentNode.insertBefore(atag, s);
     <div style="font-size: 14px;">
             <img src="/img/ydzstou.png" style="float: right;margin: 9px 0;width:50px;position: absolute;right: 0;">
             <div style="margin-left:10px">
-                <span class="mui-icon mui-icon-phone"></span> (+65) 8876 8960
+                 Phone: (+65) 8876 8960
                 <br/>
-                <span class="mui-icon mui-icon-email"></span> rbzjlprc@gmail.com
+                Email: rbzjlprc@gmail.com
                 <br/>
-                <span class="mui-icon mui-icon-location"></span>  152 Beach Road, # 14-02, Gateway East, Singapura 189721
+                Alamat Perusahaan: 152 Beach Road, # 14-02, Gateway East, Singapura 189721
             </div>
         </div>  
 <!--产品轮播-->

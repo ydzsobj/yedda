@@ -104,8 +104,10 @@
 <header class="maintop">
     <div class="header">
         <a href="javascript:void(0);" id="cd-menu-trigger"><span class="cd-menu-icon"></span></a>
-        <span class="mui-icon mui-icon-phone"></span> (+65) 8876 8960 &nbsp;&nbsp;<span class="mui-icon mui-icon-email"></span> rbzjlprc@gmail.com &nbsp;&nbsp; <span class="mui-icon mui-icon-location"></span>  152 Beach Road, # 14-02, Gateway East, Singapura 189721
-        <a href="/"><img alt="{{ $site->sites_name }}" src="/img/site.png'/></a>
+        <a href="javascript:void(0);" style="font-size: 10px;">
+          Phone: (+65) 8876 8960 &nbsp; Email: rbzjlprc@gmail.com &nbsp; Alamat Perusahaan: 152 Beach Road, # 14-02, Gateway East, Singapura 189721
+        </a>
+        <a href="/"><img alt="{{ $site->sites_name }}" src="/img/site.png"/></a>
         <a href="#" class="seach newiconfont newicon-sousuotiaofangdajingqz11" data-animation="fade"
            data-reveal-id="myModal"></a>
     </div>
