@@ -176,8 +176,8 @@
         <!--有的地区轮播图需要上传视频，把轮播图抽象到 carousel_figure中 -->
         <link rel="stylesheet" type="text/css" href="/css/swiper-3.4.2.min.css"/>
         
-        <div style="font-size: 14px;">
-            <img src="/images/site.png" width="50px" style="float: right;margin: 9px 0;">
+        <!-- <div style="font-size: 14px;">
+            <img src="/img/ydzstou.png" style="float: right;margin: 9px 0;width:50px;position: absolute;right: 0;">
             <div style="margin-left:10px">
                 <span class="mui-icon mui-icon-phone"></span> 15978789522
                 <br/>
@@ -185,7 +185,7 @@
                 <br/>
                 <span class="mui-icon mui-icon-location"></span> 河南省郑州市商务外环路径大厦1717
             </div>
-        </div>  
+        </div>   -->
 <!--产品轮播-->
 @if(in_array('broadcast',$templets))
 <div class="banner"  style="position: relative;">

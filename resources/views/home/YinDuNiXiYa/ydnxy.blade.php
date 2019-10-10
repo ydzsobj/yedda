@@ -202,7 +202,17 @@ s.parentNode.insertBefore(atag, s);
     <div class="mui-content" style="-webkit-overflow-scrolling: auto;">
     <!--有的地区轮播图需要上传视频，把轮播图抽象到 carousel_figure中 -->
     <link rel="stylesheet" type="text/css" href="/css/swiper-3.4.2.min.css"/>
-    
+
+    <div style="font-size: 14px;">
+            <img src="/img/ydzstou.png" style="float: right;margin: 9px 0;width:50px;position: absolute;right: 0;">
+            <div style="margin-left:10px">
+                <span class="mui-icon mui-icon-phone"></span> (+65) 8876 8960
+                <br/>
+                <span class="mui-icon mui-icon-email"></span> rbzjlprc@gmail.com
+                <br/>
+                <span class="mui-icon mui-icon-location"></span>  152 Beach Road, # 14-02, Gateway East, Singapura 189721
+            </div>
+        </div>  
 <!--产品轮播-->
 @if(in_array('broadcast',$templets))
 <div class="banner"  style="position: relative;">
