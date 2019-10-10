@@ -104,10 +104,10 @@
 <header class="maintop">
     <div class="header">
         <a href="javascript:void(0);" id="cd-menu-trigger"><span class="cd-menu-icon"></span></a>
-        <div  style="font-size: 10px;display: inline-block;float: left;margin-left: 60px;">
+        <div  style="font-size: 8px;display: inline-block;float: left;margin-left: 50px;text-align: left;font-weight: 300;">
           Phone: (+65) 8876 8960 <br> Email: rbzjlprc@gmail.com <br> Alamat Perusahaan: 152 Beach Road, # 14-02, Gateway East, Singapura 189721
         </div>
-        <a href="/"><img alt="{{ $site->sites_name }}" src="/img/site.png"/></a>
+        <a href="/"><img alt="{{ $site->sites_name }}" src="/img/ydzstou.png"/></a>
         <a href="#" class="seach newiconfont newicon-sousuotiaofangdajingqz11" data-animation="fade"
            data-reveal-id="myModal"></a>
     </div>
