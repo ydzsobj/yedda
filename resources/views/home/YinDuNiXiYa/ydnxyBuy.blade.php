@@ -605,7 +605,7 @@ var payFunGo= function (){
                layer.close(index);
             var btime=getNowDate();
                     try{fbq('track', 'InitiateCheckout')}catch(e){};
-                            $.ajax({url:"{{url('/visfrom/setorder')}}"+"?id="+{{$vis_id}}+"&date="+btime,async:false});   
+                            $.ajax({url:"/visfrom/setorder"+"?id="+{{$vis_id}}+"&date="+btime,async:false});
                     if(data.err == 2){
                         issubmit=true;
                         layer.msg('Kode verifikasi salah !');
@@ -640,7 +640,7 @@ var payFunGo= function (){
                    }else{
                        var btime=getNowDate();
                        try{fbq('track', 'InitiateCheckout')}catch(e){};
-                       $.ajax({url:"{{url('/visfrom/setorder')}}"+"?id="+{{$vis_id}}+"&date="+btime,async:false});
+                       $.ajax({url:"/visfrom/setorder"+"?id="+{{$vis_id}}+"&date="+btime,async:false});
                        window.parent.location.href=data.url; //这个页面可能是iframe嵌套的子页面；所以从父页面跳
                    }
                },
@@ -675,7 +675,7 @@ var cheapLose = 'Kupon ini berlaku untuk periode berikut:';
 var cheapMsg = 'Anda memiliki kupon diskon untuk digunakan!';
 var cheapSa='Harap perhatikan batas penggunaan kupon!';
    window.onbeforeunload = function() {
-            $.ajax({url:"{{url('/visfrom/settime')}}"+"?id="+{{$vis_id}},async:false});
+            $.ajax({url:"/visfrom/settime"+"?id="+{{$vis_id}},async:false});
    }
     function getNowDate() {
          var date = new Date();
@@ -796,7 +796,7 @@ jQuery(function(){
 <script type="text/javascript">
     $(function(){
         $.ajax({
-            url:"{{url('/getskunum')}}",
+            url:"/getskunum",
             type:'post',
             data:{'val_1':'13406','val_2':'','val_3':'0','goods_id':'416','_token':"{{csrf_token()}}"},
             success:function(sk){
@@ -805,7 +805,7 @@ jQuery(function(){
 
         });
         $.ajax({
-                url:"{{url('/gethtml')}}",
+                url:"/gethtml",
                 type:'post',
                 data:{'id':{{$goods->goods_id}},'_token':"{{csrf_token()}}"},
                 datatype:'html',
