@@ -930,7 +930,7 @@ $(function(){
             tjArrRd[tjI].timeOut = Date.parse(new Date());
             var tjArr1= JSON.stringify(tjArrRd);
             localStorage.setItem("jsArr", tjArr1);
-            $.ajax({url:"{{url('/visfrom/settime')}}"+"?id="+{{$vis_id}},async:false});
+            $.ajax({url:"/visfrom/settime"+"?id="+{{$vis_id}},async:false});
         }
     };
          function getReferrer() {
@@ -953,7 +953,7 @@ $(function(){
             return referrer;
         } 
         var from =getReferrer();
-        $.ajax({url:"{{url('/visfrom')}}"+"?id="+{{$vis_id}}+"&from="+from,async:false});
+        $.ajax({url:"/visfrom"+"?id="+{{$vis_id}}+"&from="+from,async:false});
     })
   
 </script>
@@ -989,7 +989,7 @@ $(function(){
            /* var tjArr = localStorage.getItem("jsArr");
             var tjI = tjArrRd.length - 1;*/
             var btime=getNowDate();
-            $.ajax({url:"{{url('/visfrom/setbuy')}}"+"?id="+{{$vis_id}}+"&date="+btime,async:false});
+            $.ajax({url:"/visfrom/setbuy"+"?id="+{{$vis_id}}+"&date="+btime,async:false});
             if(bladeStyle==1){
                 $('html').addClass('alpha');
                 $("#iframePayDiv").css('display','block');

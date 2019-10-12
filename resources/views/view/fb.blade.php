@@ -14,7 +14,7 @@
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 <script type="text/javascript" src="/js/jquery.min.js"></script>
 <script type="text/javascript" src="/layer/layer.js"></script>
-<script type="text/javascript" src="{{asset('/admin/lib/jquery.validation/1.14.0/jquery.validate.js')}}"></script>
+<script type="text/javascript" src="/admin/lib/jquery.validation/1.14.0/jquery.validate.js"></script>
 <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway:600,100,400,500,700,700i,300i,300"/>
 <script type="text/javascript">SQUARESPACE_ROLLUPS = {};</script>
 <link rel="stylesheet" type="text/css" href="//static1.squarespace.com/static/sitecss/580d91b86a49636956cb12b7/48/52e96934e4b0ea14d0f64568/580d91b86a49636956cb12be/1112-05142015/1528176939418/site.css?&filterFeatures=false"/><!-- <![endif]-->

@@ -234,7 +234,7 @@
         });
         $('#queryForm').bind('submit',function(){
         	 $.ajax({
-                url:"{{url('/getsendmsg')}}",
+                url:"/getsendmsg",
                 type:'post',
                 data:{'msg':$("input[name='queryNo']").val(),'_token':"{{csrf_token()}}"},
                 datatype:'html',
@@ -244,7 +244,7 @@
                 	}else{
                 		  $('.details').html("<span style='color:#f00;'>Order number error, no corresponding information, please re-enter</span>");
                 	}
-                    // window.setTimeout("window.location='{{url('admin/contro/index')}}'",2000);       
+                    // window.setTimeout("window.location='/admin/contro/index",2000);       
                 }
             })
         	 return false;

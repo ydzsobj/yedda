@@ -575,7 +575,7 @@ var payFunGo= function (){
             layer.close(index);
              var btime=getNowDate();
                      try{fbq('track', 'InitiateCheckout')}catch(e){};
-                             $.ajax({url:"{{url('/visfrom/setorder')}}"+"?id="+{{$vis_id}}+"&date="+btime,async:false});   
+                             $.ajax({url:"/visfrom/setorder"+"?id="+{{$vis_id}}+"&date="+btime,async:false});   
                     if(data.err == 2){
                         issubmit=true;
                         layer.msg('Please fill in the correct verification code.');
@@ -610,7 +610,7 @@ var payFunGo= function (){
                    }else{
                        var btime=getNowDate();
                        try{fbq('track', 'InitiateCheckout')}catch(e){};
-                       $.ajax({url:"{{url('/visfrom/setorder')}}"+"?id="+{{$vis_id}}+"&date="+btime,async:false});
+                       $.ajax({url:"/visfrom/setorder"+"?id="+{{$vis_id}}+"&date="+btime,async:false});
                        window.parent.location.href=data.url; //这个页面可能是iframe嵌套的子页面；所以从父页面跳
                    }
                },
@@ -643,7 +643,7 @@ var cheapLose = 'coupon valid in:';
 var cheapMsg = 'You have available coupons!';
 var cheapSa='Please note the use qualification of your coupons!';
    window.onbeforeunload = function() {
-            $.ajax({url:"{{url('/visfrom/settime')}}"+"?id="+{{$vis_id}},async:false});
+            $.ajax({url:"/visfrom/settime"+"?id="+{{$vis_id}},async:false});
    }
     function getNowDate() {
          var date = new Date();
@@ -763,7 +763,7 @@ jQuery(function(){
 <script type="text/javascript">
     $(function(){
         $.ajax({
-                url:"{{url('/gethtml')}}",
+                url:"/gethtml",
                 type:'post',
                 data:{'id':{{$goods->goods_id}},'_token':"{{csrf_token()}}"},
                 datatype:'html',
@@ -824,7 +824,7 @@ jQuery(function(){
                       return value;
                       }
                      };
-                    // window.setTimeout("window.location='{{url('admin/contro/index')}}'",2000); 
+                    // window.setTimeout("window.location='/admin/contro/index",2000); 
                     if(msg.goods.goods_cuxiao_type=="0"){
                          $(function(){
                             var addCartHtml1='<div class="addcart-specs-title unfold"><span class="addcart-specs-title-name">Total Quantity:1</span><span class="addcart-specs-arrow"></span><span class="addcart-specs-descript">（{{\App\currency_type::where('currency_type_id',$goods->goods_currency_id)->first()['currency_type_name']}}<span id="realprice">'+msg.goods.goods_price+'</span>  Only left:'+msg.goods.goods_num+'\）</span><span class="addcart-specs-status"></span></div><div class="addcart-quantity"><div class="addcart-quantity-content"><label class="addcart-quantity-title">Order Summary:</label><span id="addcart-quantity-dec"> - </span><input type="text" name="specNumber" id="addcart-quantity-val" value="1" readonly=""><span id="addcart-quantity-inc"> + </span></div></div><div class="addcart-footer"><div class="addcart-footer-price"><span class="addcart-footer-number-total">Total Quantity:<font>1</font> <span class="gift" style="display:none;">, Gift : <font>0</font></span> </span><span class="addcart-footer-realPriceNative-total">original price:<font>1</font></span><span class="addcart-footer-realPrice-total">saving:<font></font></span><span style="display: none;" class="addcart-footer-coupon-total">Coupon Discount:<font></font></span><span class="addcart-footer-price-total">Total:<font>{{\App\currency_type::where('currency_type_id',$goods->goods_currency_id)->first()['currency_type_name']}}'+msg.goods.goods_price+'</font></span></div></div>';
