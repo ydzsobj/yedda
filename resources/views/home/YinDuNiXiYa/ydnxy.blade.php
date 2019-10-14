@@ -431,6 +431,7 @@ s.parentNode.insertBefore(atag, s);
                 Hasil penggunaan sebenarnya produk ini ditentukan oleh keadaan pribadi, tidak bisa menjamin semua pengguna dapat menikmati efek promosi.Kalau ada pertanyaan,bisa hubungi kami via layanan pengguna online atau email(
                                         <a href="mail:rbzjlprc@gmail.com" style="color:#F8770E">rbzjlprc@gmail.com</a>
                                         ),perusahaan kami memiliki hak interpretasi akhir.</p>
+                <div style="color:red"><strong>Penyangkalan:</strong>  Situs ini bukan bagian dari situs Facebook atau Inc. Selain itu, situs ini tidak disetujui Facebook dengan cara apapun. Thefacebook merupakan ciri khas FACEBOOK, Inc.</div>
             </td></tr>
         {{--@endif--}}
 {{--        @if(in_array('apply_goods',$templets))--}}

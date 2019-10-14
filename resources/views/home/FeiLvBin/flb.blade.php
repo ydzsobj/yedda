@@ -247,6 +247,7 @@
                     <strong>Contact Us</strong>
                     <p>If you have any questions, concerns, or comments about our privacy policy you may contact us.</p>
                 </div>
+                <div style="color:red"><strong>Disclaimer:</strong>  This site is not a part of the Facebook website or Facebook Inc. Additionally, this site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.</div>
                 
             </div>
         </div>
