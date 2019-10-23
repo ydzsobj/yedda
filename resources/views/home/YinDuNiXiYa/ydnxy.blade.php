@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="shortcut icon" href="https://cdn.uudobuy.com/ueditor/image/20171019/1508385777747154.png"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>[fleekfly]{{$goods->goods_name}}</title>
         <meta name="keywords" content=""/>
@@ -148,11 +147,6 @@
 
 	</head>
     <body style="position:relative">
-    @if(trim($goods->size_photo)!='')
-        <div class="size_img">
-            <img src="{{$goods->size_photo}}" alt="">
-        </div>
-    @endif
         <!-- 宗进 -->
                <script type="text/javascript">
 window._pt_lt = new Date().getTime();

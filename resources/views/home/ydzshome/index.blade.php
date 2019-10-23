@@ -12,9 +12,9 @@
                 <div class="swipe-wrap">
                     @foreach($banners as $banner)
                         <div>
-                            <a @if($banner->site_goods_id) href="{{ url('/index/site_goods/') .'/'.$banner->site_goods_id }}"
+                            <a @if($banner->site_goods_id) href="{{ '/index/site_goods/' .'/'.$banner->site_goods_id }}"
                                @else href="" @endif><img class="img-responsive"
-                                                         src="{{ url($banner->site_img) }}"
+                                                         src="{{ $banner->site_img }}"
                                                          alt=""></a></div>
                     @endforeach
                 </div>
@@ -34,8 +34,8 @@
                         @if($key < 9)
                             <li style="position:relative;">
                              <div>
-                             <a href="{{ url('/cate/') .'/'.$cate->site_goods_type_id  }}">
-                                    <img class="img-responsive" src="{{ url('') }}/{{ $cate->goods_type_img }}" alt="{{ $cate->site_class_show_name }}">
+                             <a href="{{ '/cate/' .'/'.$cate->site_goods_type_id  }}">
+                                    <img class="img-responsive" src="{{ '' }}/{{ $cate->goods_type_img }}" alt="{{ $cate->site_class_show_name }}">
                                 </a>
                                 <span style="position:absolute;bottom:0;width:100%;text-align:center;font-size: 12px;line-height: 14px;"><b>{{$cate->site_class_show_name}}</b></span>
                              </div>
@@ -44,7 +44,7 @@
                     @endforeach
                         <li style="position:relative;">
                             <div>
-                            <a href="{{ url('/cate/') .'/'.$cates[0]->site_goods_type_id  }}">
+                            <a href="{{ '/cate/' .'/'.$cates[0]->site_goods_type_id  }}">
                                 <img class="img-responsive" src="{{ asset('img/site_img/more.jpg') }}">
                             </a>
                               <span style="position:absolute;bottom:0;width:100%;text-align:center;font-size: 12px;line-height: 14px;"><b>More</b></span>
@@ -57,8 +57,8 @@
                                             <div class=" djs">
                                     @if($activitie1)
                                         <div class="djstu1">
-                                            <a href="{{ url('activity/2') }}">
-                                                <img src="{{ url($activitie1->site_active_img) }}" width="308"
+                                            <a href="{{ 'activity/2' }}">
+                                                <img src="{{ $activitie1->site_active_img }}" width="308"
                                                      height="380">
                                             </a>
                                         </div>
@@ -67,8 +67,8 @@
                                         <div class="djstu2">
                                             @foreach($activities as $key=>$activity)
                                                 <div class="djs0{{ $key }}">
-                                                    <a href="{{ url('activity/') . '/' . $activity->site_active_type }}">
-                                                        <img src="{{ url($activity->site_active_img) }}" width="308"
+                                                    <a href="{{ 'activity/' . '/' . $activity->site_active_type }}">
+                                                        <img src="{{ $activity->site_active_img }}" width="308"
                                                              height="190">
                                                     </a>
                                                 </div>
