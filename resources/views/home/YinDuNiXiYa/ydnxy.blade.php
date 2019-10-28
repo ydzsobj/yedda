@@ -177,7 +177,7 @@
     <div style="font-size: 14px;">
             <img src="/img/ydzstou.png" style="float: right;margin: 9px 0;width:50px;position: absolute;right: 0;">
             <div style="margin-left:10px">
-                 Phone: (+65) 8876 8960
+                 Phone: (+65) 98902360
                 <br/>
                 Email: rbzjlprc@gmail.com
                 <br/>
