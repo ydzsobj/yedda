@@ -38,6 +38,20 @@
         <script type="text/javascript" src="/js/conversion.js"></script>
        <script type="text/javascript" src="/js/resizeDIV.js"></script>
         <script type="text/javascript" src="/js/global.js?v=1.0"></script>
+
+        <meta property="og:image" content="http://static.fleekfly.xyz/ydzs.png"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content=" [fleekfly]{{$goods->goods_name}} ">
+    <meta property="og:description" content="[fleekfly]{{$goods->goods_name}}">
+    <script>
+      // document.querySelector("meta[property='og:url']").remove();
+      var head = document.getElementsByTagName('head');
+      var meta = document.createElement('meta')
+      meta.setAttribute('property', 'og:url')
+      meta.content = location.host
+      head[0].appendChild(meta)
+    </script>
+
         <style>
             .table_cell {
                 width: 62%;
