@@ -8,9 +8,9 @@
     <meta name="description" content=" {{ $site->sites_name }}"/>
     <meta name="keywords" content="{{ $site->sites_name }}"/>
     <meta name="robots" content="INDEX,FOLLOW"/>
-    <link rel="icon" href="https://vivishop.looaon.com/favicon/default/logo-159t2ljb68a6xlehh7s62t79r1.png"
+    <link rel="icon" href="http://static.fleekfly.xyz/ydzs.png"
           type="image/x-icon"/>
-    <link rel="shortcut icon" href="https://vivishop.looaon.com/favicon/default/logo-159t2ljb68a6xlehh7s62t79r1.png"
+    <link rel="shortcut icon" href="http://static.fleekfly.xyz/ydzs.png"
           type="image/x-icon"/>
     <link rel="alternate" media="only screen and (max-width: 640px)" href="{{ $site->url }}">
     <link rel="stylesheet" type="text/css" href="/css/site_css/default.css"/>
