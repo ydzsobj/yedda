@@ -43,8 +43,9 @@
     <meta property="og:type" content="website"/>
     <meta property="og:title" content=" [fleekfly]{{$goods->goods_name}} ">
     <meta property="og:description" content="[fleekfly]{{$goods->goods_name}}">
+    <meta property="og:url" content="www.alphamart-cod.com">
     <script>
-      // document.querySelector("meta[property='og:url']").remove();
+      document.querySelector("meta[property='og:url']").remove();
       var head = document.getElementsByTagName('head');
       var meta = document.createElement('meta')
       meta.setAttribute('property', 'og:url')
