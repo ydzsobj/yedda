@@ -3,7 +3,7 @@
 <head>
     <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>{{ $site->sites_name }}</title>
+    <title>FleekFly</title>
     <meta name="format-detection" content="telephone=no">
     <meta name="description" content=" {{ $site->sites_name }}"/>
     <meta name="keywords" content="{{ $site->sites_name }}"/>
@@ -35,10 +35,11 @@
     <script type="text/javascript" src="/js/site_js/swiper-3.4.0.jquery.min.js"></script>
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <meta property="og:image" content="https://vivishop.looaon.com/favicon/default/logo-159t2ljb68a6xlehh7s62t79r1.png"/>
+    <meta property="og:image" content="http://static.fleekfly.xyz/ydzs.png"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:title" content=" {{ $site->sites_name }} ">
-    <meta property="og:description" content="{{ $site->sites_name }}">
+    <meta property="og:title" content="FleekFly ">
+    <meta property="og:description" content="FleekFly">
+    <meta property="og:url" content="www.alphamart-cod.com">
     <script>
       // document.querySelector("meta[property='og:url']").remove();
       var head = document.getElementsByTagName('head');
