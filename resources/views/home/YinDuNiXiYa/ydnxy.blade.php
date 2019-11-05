@@ -39,11 +39,11 @@
        <script type="text/javascript" src="/js/resizeDIV.js"></script>
         <script type="text/javascript" src="/js/global.js?v=1.0"></script>
 
-        <meta property="og:image" content="http://static.fleekfly.xyz/ydzs.png"/>
+        <meta property="og:image" content="https://www.alphamart-cod.com/img/ydzs.png"/>
     <meta property="og:type" content="website"/>
     <meta property="og:title" content=" [fleekfly]{{$goods->goods_name}} ">
     <meta property="og:description" content="[fleekfly]{{$goods->goods_name}}">
-    <meta property="og:url" content="www.alphamart-cod.com">
+    <meta property="og:url" content="https://www.alphamart-cod.com">
     <script>
       document.querySelector("meta[property='og:url']").remove();
       var head = document.getElementsByTagName('head');

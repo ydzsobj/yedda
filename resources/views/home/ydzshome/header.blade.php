@@ -8,9 +8,9 @@
     <meta name="description" content=" {{ $site->sites_name }}"/>
     <meta name="keywords" content="{{ $site->sites_name }}"/>
     <meta name="robots" content="INDEX,FOLLOW"/>
-    <link rel="icon" href="http://static.fleekfly.xyz/ydzs.png"
+    <link rel="icon" href="https://www.alphamart-cod.com/img/ydzs.png"
           type="image/x-icon"/>
-    <link rel="shortcut icon" href="http://static.fleekfly.xyz/ydzs.png"
+    <link rel="shortcut icon" href="hhttps://www.alphamart-cod.com/img/ydzs.png"
           type="image/x-icon"/>
     <link rel="alternate" media="only screen and (max-width: 640px)" href="{{ $site->url }}">
     <link rel="stylesheet" type="text/css" href="/css/site_css/default.css"/>
@@ -35,11 +35,11 @@
     <script type="text/javascript" src="/js/site_js/swiper-3.4.0.jquery.min.js"></script>
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <meta property="og:image" content="http://static.fleekfly.xyz/ydzs.png"/>
+    <meta property="og:image" content="https://www.alphamart-cod.com/img/ydzs.png"/>
     <meta property="og:type" content="website"/>
     <meta property="og:title" content="FleekFly ">
     <meta property="og:description" content="FleekFly">
-    <meta property="og:url" content="www.alphamart-cod.com">
+    <meta property="og:url" content="https://www.alphamart-cod.com">
     <script>
       document.querySelector("meta[property='og:url']").remove();
       var head = document.getElementsByTagName('head');
