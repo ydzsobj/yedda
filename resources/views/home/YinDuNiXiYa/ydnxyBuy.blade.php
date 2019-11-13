@@ -295,6 +295,16 @@
     text-align: center;" id="quhao">+62</span>
         <input type="text" style="width:50%" datatype="/^\d+$/" placeholder="Harus diisi, Isi nomor HP penerima" nullmsg="No. HP tidak boleh kosong"  onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')"errormsg="No. HP tidak boleh kosong" name="telephone" class="mui-input-clear">
     </div>
+    <div class="mui-input-row">
+        <label><span class="require">*</span>Konfirmasi nomor lagi:</label>
+        <span style="    width: 22%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    display: inline-block;
+    line-height: 32px;
+    text-align: center;" id="quhao">+62</span>
+        <input type="text" style="width:50%" datatype="/^\d+$/" placeholder="Masukan ulang nomor telepon anda (sama nomor diatas)" nullmsg="No. HP tidak boleh kosong"  onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')"errormsg="No. HP tidak boleh kosong" name="telephone2" class="mui-input-clear">
+    </div>
     <!--<div class="mui-input-row" style="display:none;">-->
         <!--<label>Country / Region:</label>-->
         <!---->
@@ -547,6 +557,10 @@ var payFun=function (){
     }
     if(datasObj.telephone==null||datasObj.telephone==''){
         layer.msg("Silahkan isi no. HP penerima");
+        return false;
+    }
+    if(datasObj.telephone != datasObj.telephone2){
+        layer.msg("Nomor telepon yang dimasukkan dua kali harus sama");
         return false;
     }
     // var res = /^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/;//邮箱
