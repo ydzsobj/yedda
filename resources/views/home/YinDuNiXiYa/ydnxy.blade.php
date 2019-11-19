@@ -190,7 +190,7 @@
     <link rel="stylesheet" type="text/css" href="/css/swiper-3.4.2.min.css"/>
 
     <div style="font-size: 14px;">
-            <img src="/img/ydzstou.png" style="float: right;margin: 9px 0;width:60px;position: absolute;right: 0;">
+            <img src="/img/ydzstou.png" style="float: right;margin: 9px 0;width:50px;position: absolute;right: 0; top: 40px;">
             <div style="margin-left:10px">
                 Telepon indonesia: (+62) 81291466594
                 <br/>
