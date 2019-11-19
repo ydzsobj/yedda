@@ -74,7 +74,7 @@ header {
 	position: fixed;
 	background: #fff;
 	top: 0px;
-	height: 45px;
+	/* height: 45px; */
 	width: 100%;
 	max-width: 780px;
 	z-index: 10;

@@ -119,7 +119,15 @@
     <div class="header">
         <a href="javascript:void(0);" id="cd-menu-trigger"><span class="cd-menu-icon"></span></a>
         <div  style="font-size: 8px;display: inline-block;float: left;margin-left: 50px;text-align: left;font-weight: 300;">
-          Phone: (+65) 98902360 <br> Email: rbzjlprc@gmail.com <br> Alamat Perusahaan: 152 Beach Road, # 14-02, Gateway East, Singapura 189721
+                Telepon indonesia: (+62) 81295266015
+                <br/>
+                Alamat indonesia:  Gandaria City MallGround Floor – G 75, jakarta
+                <br/>
+                Singapura telepon: (+65) 98902360
+                <br/>
+                Kotak surat singapura: rbzjlprc@gmail.com
+                <br/>
+                Alamat singapura:  152 Beach Road, # 14-02, Gateway East, Singapura 189721
         </div>
         <a href="/"><img alt="{{ $site->sites_name }}" src="/img/ydzstou.png"/></a>
         <a href="#" class="seach newiconfont newicon-sousuotiaofangdajingqz11" data-animation="fade"
