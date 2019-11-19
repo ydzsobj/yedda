@@ -190,9 +190,9 @@
     <link rel="stylesheet" type="text/css" href="/css/swiper-3.4.2.min.css"/>
 
     <div style="font-size: 14px;">
-            <img src="/img/ydzstou.png" style="float: right;margin: 9px 0;width:50px;position: absolute;right: 0;">
+            <img src="/img/ydzstou.png" style="float: right;margin: 9px 0;width:60px;position: absolute;right: 0;">
             <div style="margin-left:10px">
-                Telepon indonesia: 081295266015
+                Telepon indonesia: (+62) 81295266015
                 <br/>
                 Alamat indonesia:  Gandaria City MallGround Floor – G 75, jakarta
                 <br/>
