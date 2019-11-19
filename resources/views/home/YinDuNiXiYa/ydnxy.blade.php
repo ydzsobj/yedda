@@ -192,11 +192,15 @@
     <div style="font-size: 14px;">
             <img src="/img/ydzstou.png" style="float: right;margin: 9px 0;width:50px;position: absolute;right: 0;">
             <div style="margin-left:10px">
-                 Phone: (+65) 98902360
+                Telepon indonesia: 081295266015
                 <br/>
-                Email: rbzjlprc@gmail.com
+                Alamat indonesia:  Gandaria City MallGround Floor – G 75, jakarta
                 <br/>
-                Alamat Perusahaan: 152 Beach Road, # 14-02, Gateway East, Singapura 189721
+                Singapura telepon: (+65) 98902360
+                <br/>
+                Kotak surat singapura: rbzjlprc@gmail.com
+                <br/>
+                Alamat singapura:  152 Beach Road, # 14-02, Gateway East, Singapura 189721
             </div>
         </div>  
 <!--产品轮播-->
