@@ -119,7 +119,7 @@
     <div class="header">
         <a href="javascript:void(0);" id="cd-menu-trigger"><span class="cd-menu-icon"></span></a>
         <div  style="font-size: 8px;display: inline-block;float: left;margin-left: 50px;text-align: left;font-weight: 300;">
-                Telepon indonesia: (+62) 81295266015
+                Telepon indonesia: (+62) 81291466594
                 <br/>
                 Alamat indonesia:  Gandaria City MallGround Floor – G 75, jakarta
                 <br/>
