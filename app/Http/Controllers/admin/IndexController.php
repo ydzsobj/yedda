@@ -3,12 +3,22 @@
 namespace App\Http\Controllers\admin;
 
 use App\admin;
+use App\channel\smsAPI;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Model\ServicePhone;
 use Illuminate\Support\Facades\Auth;
 class IndexController extends Controller
 {
     public function index(Request $request){
+
+        // $phone = ServicePhone::round_phone(1002);
+        // dd($phone);
+        // $sms = new smsAPI();
+        // $msg = 'ID:999999,Ada pesanan baru masuk, silakan proses';
+        // dd($sms->send($msg, $phone));
+
+
     	$data=getclientcity($request);
     	$hcoun=\App\order::where(function($query){
             $query->whereIn('order_type',[0,11]);
