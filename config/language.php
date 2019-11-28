@@ -79,8 +79,8 @@ return [
          Singapura telepon: (+65) 98902360
          <br/>
          Kotak surat singapura: rbzjlprc@gmail.com
-         <br/> <br/>
-         Alamat singapura:  152 Beach Road, # 14-02, Gateway East, Singapura 189721<br/>
+         <br/>
+         Alamat singapura:  152 Beach Road, # 14-02, Gateway East, Singapura 189721<br/><br/>
             Jika Anda memiliki pertanyaan, silakan tinggalkan pesan, Layanan Pelanggan akan menjawab umumnya dalam waktu 24 (hari kerja)jam / 48 (akhir pekan) jam.<br/>Untuk informasi umum, seperti proses pembelian, metode pembayaran, opsi pengiriman atau proses sengketa, silakan merujuk ke halaman Bantuan kami.<br/><br/>Jika Anda memerlukan pertanyaan dengan pesanan terbaru Anda, silakan hubungi Pusat Layanan Pelanggan kami di <b><a href="mailto:rbzjlprc@gmail.com" style="color:#F8770E">rbzjlprc@gmail.com</a></b><br/><br/>Alamat Perusahaan: 152 Beach Road, # 14-02, Gateway East, Singapura 189721 (Alamat tidak-kembali, jika Anda perlu mendapatkan alamat kembali, silakan hubungi layanan pelanggan kami)',
 
          'Arab' =>'<div style="text-align: right;font-size: 20px"><b> 88768960 (65+): </b><span>الهاتف / الدردشة •</span><br/><br/> <b><a href="mailto:rbzjlprc@gmail.com" style="color:#F8770E">rbzjlprc@gmail.com:</a></b>البريد الإلكتروني •<br/><br/>
