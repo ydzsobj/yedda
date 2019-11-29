@@ -212,7 +212,9 @@ class OrderController extends Controller
      * @return \Illuminate\Http\JsonResponse
      */
    public function get_table(Request $request){
-      		$info=$request->all();
+        $info=$request->all();
+        $search_by_id = $request->get('search_by_id');
+
           if(!isset($info['order'])){
             $arr=['err'=>'缺少order参数'];
             \Log::notice('获取order缺少datatable参数');
@@ -335,6 +337,9 @@ class OrderController extends Controller
                      $query->orWhere('order_repeat_field','1,2,3');
                  }
              })
+             ->when($search_by_id, function($query) use ($search_by_id){
+                $query->where('order.order_id', $search_by_id);
+            })
             ->count();
 
              //列表数据
@@ -342,6 +347,9 @@ class OrderController extends Controller
             ->select('order.*','goods.goods_real_name','admin.admin_show_name','goods.goods_kind_id')
             ->leftjoin('goods','order.order_goods_id','=','goods.goods_id')
             ->leftjoin('admin','order.order_admin_id','=','admin.admin_id')
+            ->when($search_by_id, function($query) use ($search_by_id){
+                $query->where('order.order_id', $search_by_id);
+            })
             ->where(function($query)use($search){
                 $query->where([['order.order_single_id','like',"%$search%"],['order.is_del','=','0']]);
                 $query->orWhere([['order.order_ip','like',"%$search%"],['order.is_del','=','0']]);
@@ -451,6 +459,9 @@ class OrderController extends Controller
               $query->orWhere([['order.order_name','like',"%$search%"],['order.is_del','=','0']]);
               $query->orWhere([['order.order_tel','like',"%$search%"],['order.is_del','=','0']]);
           })
+          ->when($search_by_id, function($query) use ($search_by_id){
+                $query->where('order.order_id', $search_by_id);
+            })
           ->where(function($query)use($goods_search){
               if($goods_search!=0){
                    $garr=\App\goods::get_only_slef_id($goods_search);
@@ -547,6 +558,9 @@ class OrderController extends Controller
                 $query->orWhere([['order.order_name','like',"%$search%"],['order.is_del','=','0']]);
                 $query->orWhere([['order.order_tel','like',"%$search%"],['order.is_del','=','0']]);
           })
+          ->when($search_by_id, function($query) use ($search_by_id){
+                $query->where('order.order_id', $search_by_id);
+            })
           ->where(function($query)use($goods_search){
             if($goods_search!=0){
               $garr=\App\goods::get_only_slef_id($goods_search);
