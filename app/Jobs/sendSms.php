@@ -43,9 +43,11 @@ class sendSms implements ShouldQueue
             $result = $sms->send($send_msg, $phone);
 
             if($result->code == 0){
+                $success_msg = sprintf('发送短信成功，对应订单id=%s', $this->order->order_id);
+                Log::info($success_msg);
                 echo '发送成功';
             }else{
-                $error_msg = prinf('发送失败，错误code:%d,error:%s', $result->code, $result->error);
+                $error_msg = sprintf('发送失败，错误code:%d,error:%s', $result->code, $result->error);
                 Log::info($error_msg);
                 echo $error_msg;
             }

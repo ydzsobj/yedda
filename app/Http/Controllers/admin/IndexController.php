@@ -12,6 +12,8 @@ class IndexController extends Controller
 {
     public function index(Request $request){
 
+        // dd(ServicePhone::round_phone(2));
+        
     	$data=getclientcity($request);
     	$hcoun=\App\order::where(function($query){
             $query->whereIn('order_type',[0,11]);
