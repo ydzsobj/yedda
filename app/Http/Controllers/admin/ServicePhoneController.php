@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Model\ServicePhone;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rule;
 
 class ServicePhoneController extends Controller
 {
@@ -29,6 +31,12 @@ class ServicePhoneController extends Controller
 
     public function store(Request $request){
 
+        $validator = Validator::make($request->all(), [
+            'phone' => 'required|unique:service_phones|max:20',
+            'name' => 'required',
+            'area_code' => 'required',
+        ])->validate();
+
         $req = $request->only(['name','phone','area_code']);
 
         $res = ServicePhone::create($req);
@@ -48,6 +56,15 @@ class ServicePhoneController extends Controller
     }
 
     public function update(Request $request, $id){
+
+        $validator = Validator::make($request->all(), [
+            'phone' => [
+                'required',
+                Rule::unique('service_phones')->ignore($id),
+            ],
+            'name' => 'required',
+            'area_code' => 'required',
+        ])->validate();
 
         $req = $request->only(['name', 'phone', 'area_code', 'round']);
 

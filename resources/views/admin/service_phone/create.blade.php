@@ -83,6 +83,7 @@
                         }
                     },
                     error: function(XmlHttpRequest, textStatus, errorThrown){
+                        console.log(XmlHttpRequest,textStatus,errorThrown);
                         layer.msg('error!');
                     }});
             }
