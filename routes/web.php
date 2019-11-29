@@ -244,8 +244,8 @@ Route::middleware(['auth:check','checkadmin'])->group(function($router){
 	Route::get('/admin/sites/change_stauts','admin\SiteController@change_stauts');//更新单品分类显示状态
 	
 	//客服管理
-	$router->resource('/admin/service_phones', 'Admin\ServicePhoneController');
-	$router->get('/admin/api/service_phones', 'Admin\ServicePhoneController@api_index');
+	$router->resource('/admin/service_phones', 'admin\ServicePhoneController');
+	$router->get('/admin/api/service_phones', 'admin\ServicePhoneController@api_index');
 	
 
     //仓储路由
