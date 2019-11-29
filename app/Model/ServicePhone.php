@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class ServicePhone extends Model
 {
     use SoftDeletes;
-    
+
     protected $tables = 'service_phones';
 
     protected $fillable = [
@@ -42,5 +42,12 @@ class ServicePhone extends Model
                 return false;
             }
         }
+    }
+
+    /**
+     * 检查有没有可用的
+     */
+    public static function check_available(){
+        return self::whereNull('disabled_at')->count();
     }
 }

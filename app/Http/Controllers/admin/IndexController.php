@@ -12,13 +12,6 @@ class IndexController extends Controller
 {
     public function index(Request $request){
 
-        // $phone = ServicePhone::round_phone(1002);
-        // dd($phone);
-        // $sms = new smsAPI();
-        // $msg = 'ID:999999,Ada pesanan baru masuk, silakan proses';
-        // dd($sms->send($msg, $phone));
-
-
     	$data=getclientcity($request);
     	$hcoun=\App\order::where(function($query){
             $query->whereIn('order_type',[0,11]);
