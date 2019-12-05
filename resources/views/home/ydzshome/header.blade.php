@@ -60,7 +60,8 @@
          s.parentNode.insertBefore(t,s)}(window,document,'script',
          'https://connect.facebook.net/en_US/fbevents.js');
           fbq('init', '515234638998694'); 
-         fbq('track', 'PageView');
+          fbq('track', 'PageView');
+          fbq('track', 'ViewContent');
     </script>  
     <noscript>
          <img height="1" width="1" 
