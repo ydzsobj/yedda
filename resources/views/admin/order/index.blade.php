@@ -24,7 +24,10 @@
 </style>
 <!-- 上面样式解决dataTable;border-left错开BUG -->
 <div class="page-container">
-		<div class="text-c"> 日期范围：
+		
+		<div class="text-c">
+			ID:<input type="text" class="input-text" style="width:120px;margin:30px;" id="search_by_id" > 
+		日期范围：
 		<input type="text" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss', maxDate:'#F{$dp.$D(\'datemax\')||\'%y-%M-%d %H:%m:%s\'}' })" id="datemin" class="input-text Wdate" style="width:120px;">
 		-
 		<input type="text" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss', minDate:'#F{$dp.$D(\'datemin\')}',maxDate:'%y-%M-%d %H:%m:%s' })" id="datemax" class="input-text Wdate" style="width:120px;">
@@ -324,6 +327,7 @@ function states(){
 			order_repeat_ip:function(){return $('#order_repeat_ip').val()},
 			order_repeat_name:function(){return $('#order_repeat_name').val()},
 			order_repeat_tel:function(){return $('#order_repeat_tel').val()},
+			search_by_id:function(){return $('#search_by_id').val()},
 			mintime:function(){return $('#datemin').val()},
 			maxtime:function(){return $('#datemax').val()},
 			order_type:function(){return $('#order_type').val()},

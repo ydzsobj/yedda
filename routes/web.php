@@ -73,7 +73,7 @@ Route::middleware([])->group(function(){
 });
 //后台相关路由
 Route::match(['get','post'],'/admin/login','admin\ManagerController@login')->name('login')->middleware('checkadmin');
-Route::middleware(['auth:check','checkadmin'])->group(function(){
+Route::middleware(['auth:check','checkadmin'])->group(function($router){
 	Route::get('/logout',function(){
     	Auth::logout();
     	return redirect('/admin/login');
@@ -241,7 +241,13 @@ Route::middleware(['auth:check','checkadmin'])->group(function(){
     Route::any('/admin/sites/post_update','admin\SiteController@post_update');//新增站点
     Route::get('/admin/sites/delete_site','admin\SiteController@delete_site');//删除站点
     Route::any('/admin/sites/site_copy','admin\SiteController@site_copy');//复制站点
-    Route::get('/admin/sites/change_stauts','admin\SiteController@change_stauts');//更新单品分类显示状态
+	Route::get('/admin/sites/change_stauts','admin\SiteController@change_stauts');//更新单品分类显示状态
+	
+	//客服管理
+	$router->resource('/admin/service_phones', 'admin\ServicePhoneController');
+	$router->get('/admin/api/service_phones', 'admin\ServicePhoneController@api_index');
+	
+
     //仓储路由
 	Route::group(['prefix' => 'admin/storage'], function ($router)
 	    {
