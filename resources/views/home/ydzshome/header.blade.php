@@ -59,13 +59,13 @@
          t.src=v;s=b.getElementsByTagName(e)[0];
          s.parentNode.insertBefore(t,s)}(window,document,'script',
          'https://connect.facebook.net/en_US/fbevents.js');
-          fbq('init', '515234638998694'); 
+          fbq('init', '512837389280790'); 
           fbq('track', 'PageView');
-          fbq('track', 'ViewContent');
+        //   fbq('track', 'ViewContent');
     </script>  
     <noscript>
          <img height="1" width="1" 
-        src="https://www.facebook.com/tr?id=515234638998694&ev=PageView
+        src="https://www.facebook.com/tr?id=512837389280790&ev=PageView
         &noscript=1"/>
     </noscript>
     <!-- End Facebook Pixel Code -->
