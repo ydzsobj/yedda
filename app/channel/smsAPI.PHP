@@ -40,12 +40,10 @@ class smsAPI
                 ]
             ]);
         } catch (\GuzzleHttp\Exception\RequestException $e) {
-            if ($e->hasResponse()) {
-                echo $e->getResponse();
-            }else{
+            
                 Log::info('请求'.$this->url.'失败');
                 return false;
-            }
+            
         }
 
         $result = json_decode($response->getBody());
