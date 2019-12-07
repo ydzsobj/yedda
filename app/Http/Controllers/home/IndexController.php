@@ -731,11 +731,10 @@ class IndexController extends Controller
     	}else{;
             $order_id=$order->order_id;
             //sms::send(0,$order_id);  //订单短信发送提醒客服人员
-            //检测有可用的电话  发送客服短信提醒
+            //检测有可用的电话  发送客服短信提醒 01
             if(ServicePhone::check_available() > 0){
                 sendSms::dispatch($order)->onQueue('sms');
             }
-            
             
         return response()->json(['err'=>0,'url'=>"/endsuccess?type=1&goods_id=$goods_id&order_id=$order_id"]);
             //return view('ajax.endsuccess')->with(['order'=>$order,'url'=>$url,'goods'=>$goods]);
