@@ -33,6 +33,7 @@ class Controller extends BaseController
            ->where('admin.admin_id',Auth::user()->admin_id)
            ->get();
            return $rules;
-    	}
+      }
+      
     }
 }
