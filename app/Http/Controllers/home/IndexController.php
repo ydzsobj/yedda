@@ -36,6 +36,8 @@ use App\Model\ServicePhone;
 class IndexController extends Controller
 {
     protected $provider;
+    private $b;
+
     /** 构造方法，初始化参数
      * IndexController constructor.
      */
@@ -724,15 +726,16 @@ class IndexController extends Controller
                  $order_config->save();
             }
         }
-        
-    	if(!$msg){
+
+        $this->b = ServicePhone::check_available() > 0;
+        if(!$msg){
           \Log::notice('ip:'.$request->getClientIp().'订单存储失败order:'.json_encode($order));
           return response()->json(['err'=>0,'url'=>'/endfail?type=0&goods_id='.$goods_id]);
     	}else{;
             $order_id=$order->order_id;
             //sms::send(0,$order_id);  //订单短信发送提醒客服人员
             //检测有可用的电话  发送客服短信提醒
-            if(ServicePhone::check_available() > 0){
+            if($this->b){
                 sendSms::dispatch($order)->onQueue('sms');
             }
             
