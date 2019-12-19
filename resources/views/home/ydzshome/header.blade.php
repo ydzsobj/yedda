@@ -62,7 +62,18 @@
           fbq('init', '512837389280790'); 
           fbq('track', 'PageView');
         //   fbq('track', 'ViewContent');
-    </script>  
+    </script>
+     <!-- Global site tag (gtag.js) - Google Analytics -->
+     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129726119-22"></script>
+     <script>
+       window.dataLayer = window.dataLayer || [];
+       function gtag(){dataLayer.push(arguments);}
+       gtag('js', new Date());
+
+       gtag('config', 'UA-129726119-22');
+     </script>
+     <!-- End Google Pixel Code -->
+
     <noscript>
          <img height="1" width="1" 
         src="https://www.facebook.com/tr?id=512837389280790&ev=PageView
