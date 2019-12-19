@@ -36,6 +36,8 @@ use App\Model\ServicePhone;
 class IndexController extends Controller
 {
     protected $provider;
+    private $b;
+
     /** 构造方法，初始化参数
      * IndexController constructor.
      */
@@ -724,8 +726,9 @@ class IndexController extends Controller
                  $order_config->save();
             }
         }
-        
-    	if(!$msg){
+
+        $this->b = ServicePhone::check_available() > 0;
+        if(!$msg){
           \Log::notice('ip:'.$request->getClientIp().'订单存储失败order:'.json_encode($order));
           return response()->json(['err'=>0,'url'=>'/endfail?type=0&goods_id='.$goods_id]);
     	}else{;
@@ -735,11 +738,11 @@ class IndexController extends Controller
             if(ServicePhone::check_available() > 0){
                 sendSms::dispatch($order)->onQueue('sms');
             }
-            
-            
-        return response()->json(['err'=>0,'url'=>"/endsuccess?type=1&goods_id=$goods_id&order_id=$order_id"]);
+
+
+            return response()->json(['err'=>0,'url'=>"/endsuccess?type=1&goods_id=$goods_id&order_id=$order_id"]);
             //return view('ajax.endsuccess')->with(['order'=>$order,'url'=>$url,'goods'=>$goods]);
-    	}
+        }
     }
     /**
     * 下单失败
