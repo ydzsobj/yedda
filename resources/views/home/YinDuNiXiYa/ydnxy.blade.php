@@ -868,7 +868,7 @@ $(function(){
        if(goods_id =='986'){
           fbq('track', 'ViewContent',{
               content_name: 'sepatu malas kepala persegi mulut dangkal',
-              tontent_category: '',
+              tontent_category: '1',
               content_ids: ['2207562609345344'],
               content_type: 'product',
               value: 899000,
@@ -877,7 +877,7 @@ $(function(){
        }else if(goods_id =='1046'){
           fbq('track', 'ViewContent',{
                 content_name: 'Ladies fashion kulit sapi sepatu malas yang nyaman',
-                tontent_category: '',
+                tontent_category: '2',
                 content_ids: ['3286674514739934'],
                 content_type: 'product',
                 value: 920000,
@@ -886,7 +886,7 @@ $(function(){
        }else if(goods_id =='1138'){
         fbq('track', 'ViewContent',{
                 content_name: 'Sepatu kanvas',
-                tontent_category: '',
+                tontent_category: '3',
                 content_ids: ['3387366758004920'],
                 content_type: 'product',
                 value: 890000,
@@ -895,7 +895,7 @@ $(function(){
        }else if(goods_id =='1451'){
         fbq('track', 'ViewContent',{
                 content_name: 'Sepatu platform suede',
-                tontent_category: '',
+                tontent_category: '4',
                 content_ids: ['2944745695544687'],
                 content_type: 'product',
                 value: 899000,
@@ -904,7 +904,7 @@ $(function(){
        }else if(goods_id =='1608'){
         fbq('track', 'ViewContent',{
                 content_name: 'Sepatu kets',
-                tontent_category: '',
+                tontent_category: '5',
                 content_ids: ['2188134197953470'],
                 content_type: 'product',
                 value: 599000,
@@ -913,7 +913,7 @@ $(function(){
        }else if(goods_id =='1609'){
         fbq('track', 'ViewContent',{
                 content_name: 'Sepatu kanvas wanita meningkat',
-                tontent_category: '',
+                tontent_category: '6',
                 content_ids: ['1764281043696450'],
                 content_type: 'product',
                 value: 899000,
